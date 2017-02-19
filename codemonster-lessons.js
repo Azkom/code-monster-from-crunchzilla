@@ -65,34 +65,34 @@ var lessons =
 		},
 		{ message: "Miért csinálja ez ugyanazt a dolgot?  Bármilyen ötlet?",
 		},
-		{ message: "var változót(variable) jelent. What we did is create a variable, called it <span class=tutor-code>size</span>, set it equal to 80, and now we can use <span class=tutor-code>size</span> where we would have used 80. Do you know why we might want that?",  
+		{ message: "var változót(variable) jelent. Amit mi csinaltunk, létrehozunk egy változót, elnevezzük  <span class=tutor-code>size</span>-nak, egyenlővé tesszük 80-nal, és most mi használhatjuk a <span class=tutor-code>size</span> változót ott, ahol korábban a 80-at használtuk. Tudod, mi miért akarhatjuk ezt?",  
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\n"
 		},
-		{ message: "What happens if you change 80 to 220?"
+		{ message: "Mi történik ha a 80-at 220-ra cseréljük?"
 		},
-		{ message: "And look!  Wider and taller box, both at the same time!"
+		{ message: "És nézd!  Szélesebb és magasabb doboz, mindkettő ugyanabban az időben!"
 		},
-		{ message: "Can you change the other numbers to move the box around?"
+		{ message: "Meg tudod változtatni a másik két számot úgy, hogy a dobozt  köré mozgasd?"
 		},
-		{ message: "Can you make the box very small?"
+		{ message: "Tudsz csinálni egy nagyon kicsi dobozt?"
 		},
-		{ message: "What happens if you make <span class=tutor-code>size</span> equal to 0? Or to something really big like 5000?"
+		{ message: "Mi történik, ha a <span class=tutor-code>size</span>-t 0-val teszed egyenlővé? Vagy valamilyen valóban nagy számmal, pl. 5000-el?"
 		},
 
 		// More boxes
-		{ message: "Monster want two boxes.", 
+		{ message: "Monster két dobozt akar.", 
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\nc.fillRect(90, 90, size, size);\n"
 		},
-		{ message: "Both boxes have the same size.  That's a neat trick."
+		{ message: "Mindkét doboz azonos méretű.  Ez egy ügyes trükk."
 		},
-		{ message: "You can change what <span class=tutor-code>size</span> is equal to.  That will grow or shrink both boxes at once! Try changing 80 to 180!"
+		{ message: "Megváltoztathatod azt, amivel a <span class=tutor-code>size</span> egyenlő.  Ez megnöveli vagy összezsugorítja egyszerre mindkét dobozt! Próbáld a változtatást 80-ról 180-ra!"
 		},
-		{ message: "Can you move each of the boxes around by changing some of the numbers?"
+		{ message: "Tudod mozgatni mindegyik dobozt körbe néhány szám megváltoztatásával?"
 		},
-		{ message: "Monster want more boxes.  Three boxes!", 
+		{ message: "Monster több dobozt akar.  Három dobozt!", 
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\nc.fillRect(80, 80, size, size);\nc.fillRect(140, 140, size, size);\n"
 		},
-		{ message: "Now what happens when you change what <span class=tutor-code>size</span> is equal to?",
+		{ message: "Nos mi történik, amikor megváltoztatod azt, amivel a <span class=tutor-code>size</span> egyenlő?",
 		},
 		{ message: "More boxes!  Try changing size now!", 
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\nc.fillRect(60, 60, size, size);\nc.fillRect(100, 100, size, size);\nc.fillRect(140, 140, size, size);\nc.fillRect(180, 180, size, size);\n"

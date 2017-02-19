@@ -93,7 +93,7 @@ function updatePreview() {
 			var message = $('#tutor-message').html();
 			var congrats;
 			if (typeof youDidItMessage === "undefined") {
-				congrats = "Great, you did it!";
+				congrats = "Nagyszerű, megcsináltad!";
 			} else {
 				// This is an override in the JSON config (for internationalization)
 				congrats = youDidItMessage;
