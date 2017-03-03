@@ -18,9 +18,9 @@ var lessons =
 	[
 
 		// Draw box
-		{ message: "Én a Code Monster vagyok! (kattints a nevemre, hogy megnézzed mi következik!)", 
+		{ message: "Én a Code Monster vagyok! (kattints a nevemre, hogy megnézzed, mi következik!)",
 		  code: "c.fillRect(20, 20, 50, 75);\n",
-		  lessonSection: "Kezdjük el",
+		  lessonSection: "Kezdjük el!",
 		  tutorImage: 1,
 		  hiddenCode: "var c = document.getElementById('pane').getContext('2d');\nfunction rgba(r,g,b,a) {return 'rgba('+[r,g,b,a].join(',')+')';}\nfunction rgb(r,g,b,a) {return 'rgb('+[r,g,b].join(',')+')';}\n\n"
 		  // Hide the access to the canvas, which is ugly, giving instead c
@@ -28,20 +28,20 @@ var lessons =
 		  // a function.  Let that quietly succeed, not worth confusing them
 		  // on that.
 		},
-		{ message: "Elkezded a programozás tanulást! (kattints ismét!)"
+		{ message: "Ezzel megkezded a programozás tanulást! (kattints ismét!)"
 		},
-		{ message: "Alattam a baloldalon, van a Javascript kód, a jobb oldalon, az, amit csinál."
+		{ message: "Alattam, a baloldalon, van a Javascript kód, a jobb oldalon, az, amit a kód csinál."
 		},
-		{ message: "A fillRect() parancsot arra használhatod, hogy rajzolj egy dobozt. Látod  az 50-es számot? Ki tudod cserélni 150-re? ", 
+		{ message: "A fillRect() parancsot arra használhatod, hogy rajzolj egy dobozt. Látod  az 50-es számot? Ki tudod cserélni 150-re? ",
 		  code: "c.fillRect(20, 20, 50, 75);\n",
 		  youGotItCheck: "150",
 		},
-		{ message: "Ez tette a dobozt szélesebbé. Mit gondolsz mit csinál a többi szám? Próbáld megváltoztatni őket.",
+		{ message: "Ez tette a dobozt szélesebbé. Mit gondolsz, mit csinál a többi szám? Próbáld megváltoztatni őket!",
 		  lessonSection: "Paraméterek és Rajzolás",
 		},
-		{ message: "Megfejtetted?  The numbers are how far from the left side to draw the box, how far from the top, how wide to draw the box, and how tall."
+		{ message: "Megfejtetted?  A számok sorban: milyen messze rajzolja a bal oldalhoz (1.szám) és a tetejéhez (2.szám) képesta dobozt, mmilyen széles (3.szám) és milyen magas (4.szám) dobozt rajzol."
 		},
-		{ message: "Próbáld kicserélni az összes számot!  Játsz vele!",
+		{ message: "Próbáld kicserélni az összes számot!  Játssz vele!",
 		},
 		{ message: "Két doboz. Ki tudod cserélni a számokat, hogy nagyobbá tedd őket?",
 		  code: "c.fillRect(20, 20, 50, 75);\nc.fillRect(100, 100, 60, 80);\n"
@@ -52,27 +52,27 @@ var lessons =
 		},
 
 		// Variables
-		{ message: "Monster a négyzet dobozokat szereti.", 
+		{ message: "Monster a négyzet dobozokat szereti.",
 		  code: "c.fillRect(20, 20, 80, 80);\n"
 		},
-		{ message: "Egy négyzet szélessége és magassága azonos. Ez a doboz azonos a magassága és a szélessége, mindkettő 80.",
+		{ message: "Egy négyzet szélessége és magassága azonos. Ennek a doboznak azonos a magassága és a szélessége, mindkettő 80.",
 		  code: "c.fillRect(20, 20, 80, 80);\n"
 		},
-		{ message: "Hey, nézd, ez ugyanazt csinálja!", 
+		{ message: "Hey, nézd, ez a kód ugyanazt csinálja!",
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\n",
 		  lessonSection: "Változók",
 		  // tutorImage: 2,
 		},
-		{ message: "Miért csinálja ez ugyanazt a dolgot?  Bármilyen ötlet?",
+		{ message: "Miért csinálja ez a kód ugyanazt?  Bármilyen ötlet?",
 		},
-		{ message: "var változót(variable) jelent. Amit mi csinaltunk, létrehozunk egy változót, elnevezzük  <span class=tutor-code>size</span>-nak, egyenlővé tesszük 80-nal, és most mi használhatjuk a <span class=tutor-code>size</span> változót ott, ahol korábban a 80-at használtuk. Tudod, mi miért akarhatjuk ezt?",  
+		{ message: "A var változót(variable) jelent. Amit csinaltunk, létrehozunk egy változót, elnevezzük  <span class=tutor-code>size</span>-nak, egyenlővé tesszük 80-nal, és ezután a <span class=tutor-code>size</span> változót ott használhatjuk , ahol korábban a 80-at használtuk. Tudod, mi miért akarhatjuk ezt?",
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\n"
 		},
 		{ message: "Mi történik ha a 80-at 220-ra cseréljük?"
 		},
 		{ message: "És nézd!  Szélesebb és magasabb doboz, mindkettő ugyanabban az időben!"
 		},
-		{ message: "Meg tudod változtatni a másik két számot úgy, hogy a dobozt  köré mozgasd?"
+		{ message: "Meg tudod változtatni a másik két számot úgy, hogy a dobozt  körülötte mozgasd?"
 		},
 		{ message: "Tudsz csinálni egy nagyon kicsi dobozt?"
 		},
@@ -80,277 +80,279 @@ var lessons =
 		},
 
 		// More boxes
-		{ message: "Monster két dobozt akar.", 
+		{ message: "Monster két dobozt akar.",
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\nc.fillRect(90, 90, size, size);\n"
 		},
 		{ message: "Mindkét doboz azonos méretű.  Ez egy ügyes trükk."
 		},
-		{ message: "Megváltoztathatod azt, amivel a <span class=tutor-code>size</span> egyenlő.  Ez megnöveli vagy összezsugorítja egyszerre mindkét dobozt! Próbáld a változtatást 80-ról 180-ra!"
+		{ message: "Megváltoztathatod  a <span class=tutor-code>size</span> értékét.  Ez megnöveli vagy összezsugorítja egyszerre mindkét dobozt! Próbáld az étéket megváltoztatni 80-ról 180-ra!"
 		},
 		{ message: "Tudod mozgatni mindegyik dobozt körbe néhány szám megváltoztatásával?"
 		},
-		{ message: "Monster több dobozt akar.  Három dobozt!", 
+		{ message: "Monster több dobozt akar.  Három dobozt!",
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\nc.fillRect(80, 80, size, size);\nc.fillRect(140, 140, size, size);\n"
 		},
 		{ message: "Nos mi történik, amikor megváltoztatod azt, amivel a <span class=tutor-code>size</span> egyenlő?",
 		},
-		{ message: "More boxes!  Try changing size now!", 
+		{ message: "Több doboz!  Próbáld ki: változtasd meg a doboz méretét!",
 		  code: "var size = 80;\nc.fillRect(20, 20, size, size);\nc.fillRect(60, 60, size, size);\nc.fillRect(100, 100, size, size);\nc.fillRect(140, 140, size, size);\nc.fillRect(180, 180, size, size);\n"
 		},
 
 		// Two colored boxes
-		{ message: "Ooo!  Color!  Pretty!", 
+		{ message: "Ó!  Szines!  Csodás!",
 		  code: "var size = 80;\n\nc.fillStyle = \"blue\";\nc.fillRect(20, 20, size, size);\n",
-		  lessonSection: "Color",
+		  lessonSection: "Szín",
 		},
-		{ message: "Many colors work.  Try \"green\" or \"purple\" or \"gold\"."
+		{ message: "Még több szín.  Próbáld ki  a \"green\" vagy  a \"purple\" vagy  a\"gold\" színeket. A szövegben az angol neveket kell szerepeltetni. További infomrációt itt találhatsz a lehetséges  további nevekről: \"https://www.w3schools.com/colors/colors_names.asp\" ."
 		},
-		{ message: "How about two pink boxes?", 
+		{ message: "Mit szólsz két pink dobozhoz?",
 		  code: "var size = 80;\n\nc.fillStyle =\"pink\";\nc.fillRect(20, 20, size, size);\nc.fillRect(90, 90, size, size);\n"
 		},
-		{ message: "One pink and one silver.", 
+		{ message: "Egy pink és egy silver doboz.",
 		  code: "var size = 80;\n\nc.fillStyle =\"pink\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"silver\";\nc.fillRect(90, 90, size, size);\n"
 		},
-		{ message: "Can you make the silver box gold instead?  And the pink one blue instead?", 
+		{ message: "Meg tudod változtatni a silver dobozt inkább gold dobozzá?  És a pink-et  blue-vá?",
 		  code: "var size = 80;\n\nc.fillStyle =\"pink\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"silver\";\nc.fillRect(90, 90, size, size);\n"
 		},
-		{ message: "Here are two boxes that are the same color again.  Now can you make the two boxes be different colors?",
+		{ message: "Itt van két doboz, amelyek ismét azonos színűek. Nos, meg tudod csinálni, hogy a két doboz ismét különböző színű legyen?",
 		  code: "var size = 80;\n\nc.fillStyle =\"green\";\nc.fillRect(20, 20, size, size);\n\nc.fillRect(90, 90, size, size);\n"
 		},
-		{ message: "Here is one version.  I like red and blue.", 
+		{ message: "Itt van egy változat.  Én a pirosat (red) és a kéket(blue) szeretem.",
 		  code: "var size = 80;\n\nc.fillStyle =\"red\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"blue\";\nc.fillRect(80, 80, size, size);\n"
 		},
-		{ message: "Red, green, and blue.  That's nice.",
+		{ message: "Piros(red), zöld(green), és kék(blue).  Ez csodás.",
 		  code: "var size = 80;\n\nc.fillStyle =\"red\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"lime\";\nc.fillRect(80, 80, size, size);\nc.fillStyle =\"blue\";\nc.fillRect(140, 140, size, size);\n"
 		},
-		{ message: "Wha... This does the same thing!  What could rgb() be?",
+		{ message: "Wha... Ez ugyanazt csinálja!  Mi lehet az rgb() ?",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(255, 0, 0)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"rgb(0, 255, 0)\";\nc.fillRect(80, 80, size, size);\nc.fillStyle =\"rgb(0, 0, 255)\";\nc.fillRect(140, 140, size, size);\n"
 		},
-		{ message: "Try changing any of the zeroes to 200 or so.  And try changing any of the 255 to 0. What do the numbers seem to do?", 
+		{ message: "Próbáld ki: változtasd meg bármelyik nullát pl 200-ra vagy egy másik számra. És próbáld ki: változtasd meg bármelyik 255-t 0-ra. Mi látszik, mit csinálnak a számok?",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(255, 0, 0)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"rgb(0, 255, 0)\";\nc.fillRect(80, 80, size, size);\nc.fillStyle =\"rgb(0, 0, 255)\";\nc.fillRect(140, 140, size, size);\n"
 		},
-		{ message: "Did you figure it out?  rgb() refers to red, green, and blue.  The numbers go from 0 to 255. So, <span class=tutor-code>rgb(0, 255, 0)</span> means no red or blue, but all the green you got!"
+		{ message: "Meg tudod fogalmazni az rgb() jelentését?"
 		},
-		{ message: "You can make lots of colors this way if you change some of the numbers.  Try it!"
+		{ message: "Az rgb()  a pirosra (red), zöldre (green), és a kékre (blue) utal.  A számok 0 és 255 közöttiek. Így, az <span class=tutor-code>rgb(0, 255, 0)</span> azt jelenti, hogy nincs piros (red) vagy kék(blue), de minden zöld (green)!"
 		},
-		{ message: "Here is a fun game.  Can you make these two boxes the same color?",
+		{ message: "Számos színt tudsz így  előállítani, ha kicserélsz néhány számmot.  Próbáld ki!"
+		},
+		{ message: "Játsszunk egy kicsit. Ugyanarra a színre tudod állítani mindkét doboz színét?",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(0, 0, 0)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"red\";\nc.fillRect(80, 80, size, size);\n",
-		  lessonSection: "Quiz: Color",
+		  lessonSection: "Teszt: Szín",
 		},
-		{ message: "Can you make these both blue?",
+		{ message: "Kékre (blue) tudod állítani mindkettőt?",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(0, 0, 0)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"blue\";\nc.fillRect(80, 80, size, size);\n"
 		},
-		{ message: "Can you figure out what the rgb() numbers should be to make these both yellow?",
+		{ message: "Ki tudod találni, milyen  rgb() számokat kell beállítani, hogy mindkét doboz sárga (yellow) legyen?",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(255, 0, 0)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"yellow\";\nc.fillRect(80, 80, size, size);\n"
 		},
-		{ message: "Can you figure out what the rgb() numbers should be to make these both teal?",
+		{ message: "Ki tudod találni, milyen  rgb() számokat kell beállítani, hogy mindkét doboz kékeszöld (teal) legyen??",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(0, 0, 128)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"teal\";\nc.fillRect(80, 80, size, size);\n"
 		},
-		{ message: "Okay, this one is really hard.  Can you make these two exactly match?  Can you figure out what the rgb() numbers should be to make these both crimson? Don't worry if you don't get it exactly, just see how close you can get!",
+		{ message: "Ok, ez tényleg nehéz. Meg tudod csinálni, hogy mindkettő pontosan egyezzen?  Ki tudod találni ,milyen  rgb() számolat kell beírni, hogy mindkettő crimson legyen? Ne aggódj, ha nem találod el pontosan, csak látszódjon, milyen közel jutottál!",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(0, 0, 0)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"crimson\";\nc.fillRect(80, 80, size, size);\n"
 		},
-		{ message: "Here it is.  Whew, that's a hard one!  How close did you get?",
+		{ message: "Úgy van.  Huh, ez tényleg egy nehéz feladat!  Milyen közel jutottál?",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgb(220, 20, 60)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"crimson\";\nc.fillRect(80, 80, size, size);\n"
 		},
-		{ message: "If you want to try others, put \"olive\", \"purple\", \"aqua\", or any other color you can think of as the color for the first box, then try to find the rgb numbers that match it!",
+		{ message: "Ha szeretnél egy másikat kipróbálni, akkor használd az \"olive\", a \"purple\",  az \"aqua\", vagy  bármilyen másik színt,amit kigondoltál az első dobozra, majd próbálkozz, hogy kitaláld az rgb számokat, amik megfelelnek ennek!",
 		},
 
 
 		// rgba
-		{ message: "rgba() is a crazy version of rgb(). See what this does?  It's got one more number at the end that's 0.5.  What is that last number doing? Try changing the 0.5 to 0.1.  Or to 0.8.  What does it do?", 
+		{ message: "Az rgba()  egy érdekes rgb() változat. Nézzük mit csinál?  Ez megad egy számot a végén, ami 0.5.  Mit csinál ez az utolsó szám? Próbáld meg 0.5-ről 0.1-re változtni.  Vagy  0.8-ra.  Mit csinál ez?",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgba(255, 0, 0, 0.5)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(80, 80, size, size);\n",
-		  lessonSection: "Color and Transparency",
+		  lessonSection: "Szín és Átlátszóság",
 		},
-		{ message: "The a in rgba means alpha (how transparent the box is) from 0.0 (invisible) to 1.0 (solid)"
+		{ message: "Az <span class=\"tutor-code\">a</span> az rgba-ban az <span class=\"tutor-code\">alpha</span>-t (mennyire átlátszó a doboz) jelenti  a 0.0-tól (nem látszik,\" invisible\")  1.0-ig (tömör \"solid\") adhatunk neki értéket."
 		},
-		{ message: "You can do pretty cool things with rgba().  Look at this!  Try changing some of the 0.5 alphas to 0.2 or 0.8!",
+		{ message: "Az rgba()-val nagyon király dolgokat csinálhatsz.  Nézd ezt!  Próbáld megváltoztatni a 0.5-s alpha értékét 0.2-re vagy 0.8-ra!",
 		  code: "var size = 80;\n\nc.fillStyle =\"rgba(255, 0, 0, 0.5)\";\nc.fillRect(20, 20, size, size);\nc.fillStyle =\"rgba(0, 255, 0, 0.5)\";\nc.fillRect(80, 80, size, size);\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(140, 140, size, size);\n"
 		},
-		{ message: "Try changing the size from 80 to 180!  You can get some fun effects when the colors overlap. Play with it!",
+		{ message: "Próbáld megváltoztatni a size értékét 80-ról  180-ra!  Érdekes effekteket kaphatsz, ha a  színek átlapolódnak. Játssz ezzel!",
 		},
 
 		// Operators and assignment
-		{ message: "Let's go back to variables. Monster no like to repeat numbers. Can you replace both the 20 numbers with <span class=tutor-code>offset</span>?",
+		{ message: "Térjünk vissza a változókhoz! A Monster nem szereti ismételni a számokat. Helyettesíteni tudod mindkét 20-as számot az <span class=tutor-code>offset</span>-tel?",
 		  code: "var offset = 30;\nvar size = 80;\nc.fillStyle =\"lime\";\nc.fillRect(20, 20, size, size);\nc.fillRect(90, 90, size, size);\n",
-		  lessonSection: "Operators and Assignment",
+		  lessonSection: "Műveleti jelek és hozzárendelés",
 		  // tutorImage: 3,
 		},
-		{ message: "Now try changing what <span class=tutor-code>offset</span> is equal to from 30 to 50.  See how you can move the first box?",
+		{ message: "Most próbáld meg kicserélni az <span class=tutor-code>offset</span> 30-as értékét 50-re.  Nézd meg hogyan tudod az első dobozt mozgatni?",
 		  code: "var offset = 30;\nvar size = 80;\nc.fillStyle =\"lime\";\nc.fillRect(offset, offset, size, size);\nc.fillRect(90, 90, size, size);\n"
 		},
-		{ message: "Variables can be set to new values.  See how offset is set to 100 before being used by the second box?",
+		{ message: "A változóknak új értéket lehet adni.  Nézd meg, hogy  a program az offset-et hogyan állítja be 100-ra, mielőtt a program ezt haszálja a második dobozra?",
 		  code: "var offset = 30;\nvar size = 80;\nc.fillStyle =\"lime\";\nc.fillRect(offset, offset, size, size);\noffset = 100;\nc.fillRect(offset, offset, size, size);\n"
 		},
-		{ message: "Try moving the second box.  Change the 100 to 50 or 150.",
+		{ message: "Próbáld mozgatni a második dobozt!  Változtasd meg a 100-at 50-re vagy 150-re.",
 		},
-		{ message: "Try moving the first box too.",
+		{ message: "Próbáld mozgatni az első dobozt is!",
 		},
-		{ message: "Can you put the boxes on top of each other so it looks like just one box?"
+		{ message: "Egymás tetejére tudod tenni a dobozokat úgy, hogy éppen egy doboznak nézzenek ki?"
 		},
-		{ message: "You can also add numbers to a variable. See what this is doing? It changes offset with <span class=tutor-code>offset = offset + 50</span>",
+		{ message: "A változókhoz hozzáadhatsz számokat. Látod ez mit csinál? Ez megváltoztatja az offset értékét 50-nel <span class=tutor-code>offset = offset + 50</span>",
 		  code: "var offset = 30;\nvar size = 80;\nc.fillStyle =\"lime\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 50;\nc.fillRect(offset, offset, size, size);\n"
 		},
-		{ message: "<span class=tutor-code>offset = offset + 50</span> means take offset, add 50 to it, then make offset equal that now.  In other words, make offset 50 more than it used to be."
+		{ message: "<span class=tutor-code>offset = offset + 50</span> kifejezés azt jelenti, hogy veszi az offset értékét, hozzáad 50-et, majd ezt az értéket adja az offset-nek.  Más szavakkal , tedd 50-nel nagyobbá az offset-et, mint korábban volt."
 		},
-		{ message: "How about you try it?  Can you replace both the 90 numbers used for the (left, top) of the second box with a variable? Hint: Either create a new variable or change offset and then use offset.",
+		{ message: "Mi újság, kipróbáltad? Helyettesíteni tudja mindkét 90-es számot változóra, amelyet a második doboz (bal \"left\", jobb \"right\") értékeire használ a program? Tipp: Vagy létrehozol egy új változót, vagy új értéket adsz az offset változónak, és utána azt használod.",
 		  code: "var offset = 30;\nvar size = 80;\nc.fillStyle =\"lime\";\nc.fillRect(offset, offset, size, size);\n\nc.fillRect(90, 90, size, size);\n",
-		  lessonSection: "Quiz: Variables and Operators",
+		  lessonSection: "Teszt: Változók és műveleti jelek",
 		},
-		{ message: "Monsters like adding.  Me add good.  Okay, now try changing <span class=tutor-code>offset</span> from 30 to 80.  See what happens?",
+		{ message: "Monsters szereti az összeadást.  Jó, összeadok.  Ok, most próbáld megváltoztatni az <span class=tutor-code>offset</span> értékét 30-ról 80-ra.  Látod, mi történik?",
 		  code: "var offset = 30;\nvar size = 80;\nc.fillStyle =\"lime\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillRect(offset, offset, size, size);\n"
 		},
-		{ message: "Ooo, you can move both boxes together!  Change the offset and move 'em around!",
+		{ message: "Ó, mindkét dobozt együtt tudod mozgatni! Változtasd meg az offset-et és mozgasd őket körbe!",
 		},
-		{ message: "This looks the same, but it's a little different.  What's that <span class=tutor-code>*</span> doing?  What happens if you change <span class=tutor-code>* 3</span> to <span class=tutor-code>* 2</span>?  Try changing it to <span class=tutor-code>* 1</span>.  Try changing the offset too.  Did you figure out what <span class=tutor-code>*</span> means?",
+		{ message: "Ez ugyanannak tűnik, de van egy kis különbség.  Mi az, amit a <span class=tutor-code>*</span> csinál?  Mi történik, ha megváltoztatod a <span class=tutor-code>* 3</span>-at  <span class=tutor-code>* 2</span>-re?  Próbáld megváltoztatni ezt <span class=tutor-code>* 1</span>-re. Próbáld megváltoztatni az offset-et is.  Kitaláltad, hogy a <span class=tutor-code>*</span> mit jelent?",
 		  code: "var offset = 30;\nvar size = 80;\nc.fillStyle =\"lime\";\nc.fillRect(offset, offset, size, size);\noffset = offset * 3;\nc.fillRect(offset, offset, size, size);\n",
-		  lessonSection: "More Operators",
+		  lessonSection: "További műveleti jelek",
 		},
-		{ message: "<span class=tutor-code>*</span> means multiply.  <span class=tutor-code>2 * 2</span> would be 4.  So, <span class=tutor-code>offset = offset * 3</span> means make offset three times bigger."
+		{ message: "A <span class=tutor-code>*</span> jel a szorzást jelenti.  <span class=tutor-code>2 * 2</span> eredménye 4.  Így, az  <span class=tutor-code>offset = offset * 3</span> azt jelenti, hogy tedd az offset-et háromszor nagyobbá."
 		},
-		{ message: "<span class=tutor-code>*</span> means multiply and <span class=tutor-code>/</span> means divide.  So, what we set size equal to below is just a complicated way of saying make size equal to 100.  See?",
+		{ message: "<span class=tutor-code>*</span> jel jelenti a szorzást, <span class=tutor-code>/</span> jel jelenti az osztást. Úgy, ahogy mi lent értéket adunk az egy bonyolult módja annak, hogy azt  mondjuk a size értéke legyen  100.  Ugye?",
 		  code: "var size = 20 * 6 / 2 + 50 - 10;\nvar offset = 30;\nc.fillStyle =\"lime\";\nc.fillRect(offset, offset, size, size);\noffset = offset * 3;\nc.fillRect(offset, offset, size, size);\n"
 		},
 
 		// Conditionals and comparisons
-		{ message: "We can also compare numbers.  See this code?  We will only draw a second box when <span class=tutor-code>size</span> is less than 80.",
+		{ message: "Mi összehasonlíthatunk számokat. Nézd ezt a kódot?  Akkor rajzolunk egy másik dobozt, amikor a <span class=tutor-code>size</span> értéke kisebb, mint 80.",
 		  code: "var size = 50;\n\nc.fillRect(20, 20, size, size);\nif (size < 80) {\n  c.fillRect(100, 100, size, size);\n}\n",
-		  lessonSection: "If and Comparisons",
+		  lessonSection: "Ha(if) és összehasonlítás",
 		},
-		{ message: "Try changing size to 150.  See what happens? Try changing size to 79.  Then change it to 80.",
+		{ message: "Próbáld a size értékét 150-re változtatni.  Látod mi történik? Próbáld a size értékét 79-re változtatni.  Majd változtasd 80-ra.",
 		},
 
 		// Three colored boxes
-		{ message: "Okay, let's see what you know!  Here are two boxes.  Can you add a third box (offset by another 60 from the second box)?",
+		{ message: "Ok, lássuk mit tudunk!  Itt van két doboz.  Hozzá tudsz adni egy harmadik dobozt (offset értéke legyen további 60 a második doboztól)?",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"lime\";\n\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillRect(offset, offset, size, size);\n",
-		  lessonSection: "Quiz: Variables and Color",
+		  lessonSection: "Teszt: Változók és szín",
 		},
-		{ message: "Here is one way to do it. Try changing the size or offset!",
+		{ message: "Ez itt egy módja annak, hogy ezt megcsináld. Próbáld megváltoztatni a size vagy az offset értékét!",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"lime\";\n\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillRect(offset, offset, size, size);\n"
 		},
-		{ message: "Remember rgba()?  Monster like.  Can you make me three boxes with different colors?",
+		{ message: "Emlékszel az rgba()-ra?   A Monster szereti.  Meg tudod csinálni nekem, hogy a három doboz színe különböző legyen?",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\n"
 		},
-		{ message: "Here is one way.  Ooo!  Pretty!  Try changing size, offset, or the red, blue, and green numbers!",
+		{ message: "Itt van egy megoldás.  Ó!  Csodás!  Próbáld megváltoztatni a size, offset értékét, vagy a red, blue, és green számokat!",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(0, 255, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(255, 0, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n"
 		},
 
 		// For loop to avoid repeated code
-		{ message: "Monster no like writing code more than once.  Lots of writing the same code more than once here, me not like.",
+		{ message: "Monster nem szereti a kódot egynél többször leírni.  Sokan itt szeretik ugyanazt a kódot leírni több, mint egyszer, Én nem szeretem.",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"blue\";\n\nc.fillRect(offset, offset, size, size);\noffset = offset + 40;\nc.fillRect(offset, offset, size, size);\noffset = offset + 40;\nc.fillRect(offset, offset, size, size);\n",
-		  lessonSection: "For Loops",
+		  lessonSection: "For ciklusok",
 		  // tutorImage: 4,
 		},
-		{ message: "This is called a <span class=tutor-code>for</span> loop.  It repeats code without writing it more than once.  Me like.  Try changing the 3 to 5!",
+		{ message: "Ez a  <span class=tutor-code>for</span> ciklus. Ez megismétli a kódot anélkül, hogy leírnánk több, mint egyszer.  Én ezt szeretem.  Próbáld megváltzotatni a 3-t 5-re!",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"blue\";\nfor (var i = 0; i < 3; i = i + 1) {\n  c.fillRect(offset, offset, size, size);\n  offset = offset + 40;\n}\n",
 		},
-		{ message: "For loops have three parts, where to start (<span class=tutor-code>i = 0</span>), when to keep going (<span class=tutor-code>i < 5</span>), and how much to change each time (<span class=tutor-code>i = i + 1</span>). Can you make ten boxes?",
+		{ message: "A For ciklus három részből áll, ahol elkezdődik (<span class=tutor-code>i = 0</span>), amikor tovább megy (<span class=tutor-code>i < 5</span>), és amennyivel változik minden egyes ciklusban  (<span class=tutor-code>i = i + 1</span>). Tudnál csinálni 10 dobozt?",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"blue\";\nfor (var i = 0; i < 5; i = i + 1) {\n  c.fillRect(offset, offset, size, size);\n  offset = offset + 40;\n}\n",
 		},
-		{ message: "Argh!  They don't fit?  How can you make ten boxes fit?",
+		{ message: "Ah!  Ők nem illeszkednek.  Hogyan tudnád megcsinálni, hogy a 10 doboz illeszkedjen?",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"blue\";\nfor (var i = 0; i < 10; i = i + 1) {\n  c.fillRect(offset, offset, size, size);\n  offset = offset + 40;\n}\n",
 		},
-		{ message: "Here is one way!",
+		{ message: "Ez itt egy megoldás!",
 		  code: "var size = 80;\nvar offset = 20;\n\nc.fillStyle =\"blue\";\nfor (var i = 0; i < 10; i = i + 1) {\n  c.fillRect(offset, offset, size, size);\n  offset = offset + 10;\n}\n",
 		},
-		{ message: "Smaller boxes also fit.  Try playing with size, offset, and changing 10!",
+		{ message: "Kisebb dobozok mindig illeszkednek.  Próbálj meg játszani a size, offset értékekkel és cseréljük 10-re!",
 		  code: "var size = 20;\nvar offset = 20;\n\nc.fillStyle =\"blue\";\nfor (var i = 0; i < 10; i = i + 1) {\n  c.fillRect(offset, offset, size, size);\n  offset = offset + 10;\n}\n",
 		},
-		
+
 		// Lots of colored boxes
-		{ message: "Remember rgba()? What's this doing?  Play with it!",
+		{ message: "Emlékszel az rgba()-ra? Mi az amit ez csinál?  Játssz vele!",
 		  code: "var size = 50;\nvar offset = 20;\n\nfor (var i = 0; i < 10; i = i + 1) {\n  var b = i * 25;\n  var rgba = \"rgba(0, 0, \" + b + \", 0.5)\";\n  c.fillStyle = rgba;\n  c.fillRect(offset, offset, size, size);\n  offset = offset + 20;\n}\n",
-		  lessonSection: "Fun with For Loops",
+		  lessonSection: "Egy kis móka a For ciklusokkal",
 		},
-		{ message: "Complicated!  That means use 0 blue light for the first box, 25 for the second, then 50, 75, 100..."
+		{ message: "Komplikált!  Ez azt jelenti, hogy  használj 0-t halvány kéket az első dobozra, 25-öt a másodikra, majd  50-et, 75-öt, 100-at..."
 		},
-		{ message: "Here is another one, this one changing alpha!  Neat-o!",
+		{ message: "Itt egy másik példa, ez az alpha-t változtatja!  Neat-o!",
 		  code: "var size = 50;\nvar offset = 20;\n\nfor (var i = 0.1; i < 0.5; i = i + 0.05) {\n  var rgba = \"rgba(0, 0, 255, \" + i + \")\";\n  c.fillStyle = rgba;\n  c.fillRect(offset, offset, size, size);\n  offset = offset + 20;\n}\n"
 		},
-		
+
 		// Quiz
-		{ message: "Can you show me what you learned?  Draw me a square! Hint: Remember <span class=tutor-code>c.fillRect(<i>left, top, width, height</i>);</span> to draw a box.",
+		{ message: "Meg tudod nekem mutani, hogy mit tanultál?  Rajzolj nekem egy négyzetet! Tipp: Emlékezz <span class=tutor-code>c.fillRect(<i> bal(left), tető(top), Szélesség(width), magasság(height)</i>);</span>-re, hogy egy dobozt rajzolj.",
 		  code: "",
-		  lessonSection: "Quiz: Write Code Yourself",
+		  lessonSection: "Teszt: Írj egy kódot saját magad!",
 		},
-		{ message: "Can you add another square?"
+		{ message: "Hozzá tudsz adni még egy négyzetet?"
 		},
-		{ message: "Now can you make the second square red? (Hint: <span class=tutor-code>c.fillStyle = \"blue\";</span> before fillRect() will make the rect blue)"
+		{ message: "Most be tudod a második négyzetet pirosra szinezni? (Tipp: <span class=tutor-code>c.fillStyle = \"blue\";</span> parancs a fillRect() parancs előtt kékre szinezi a téglalapot)"
 		},
-		{ message: "Great! Did you get something like this? If not, try playing with the numbers a bit to see how it works!",
+		{ message: "Nagyszerű! Valami hasonlót kaptál, mint ez? Ha nem, próbálj játszani a számokkal egy kicsit, hogy lásd, ez hogyan működik!",
 		  code: "c.fillRect(10, 10, 20, 20);\nc.fillStyle = \"red\";\nc.fillRect(50, 50, 100, 100);\n"
 		},
 
 		// Draw line
-		{ message: "Monster draw line. What do you think moveTo() does? lineTo()? Try changing 20 to 50.",
+		{ message: "Monster vonalat rajzol. Mit gondolsz a  moveTo() csinálja? a lineTo()?  Próbáld megváltoztatni a 20-at 50-re.",
 		  code: "c.beginPath();\nc.moveTo(30, 20);\nc.lineTo(120, 40);\nc.stroke();\n",
-		  lessonSection: "Lines",
+		  lessonSection: "Vonalak",
 		},
-		{ message: "Try changing the other numbers too.  Can you figure out what moveTo() and lineTo() do?"
+		{ message: "Próbáld megváltoztatni a további számokat is.  Kitalálod, mit csinál a  moveTo() és a lineTo() ?"
 		},
-		{ message: "moveTo(left, top) moves the pen to a spot without drawing.  lineTo(left, top) draws a line from wherever the pen is to a spot.",
+		{ message: "A moveTo(left[bal], top[tető]) a ceruzát egy helyre mozgatja rajzolás nélkül. A lineTo(left[bal], top[tető])  egy vonalat rajzol onnan, ahol a ceruza van egy helyig.",
 		},
-		{ message: "Here is what happens if we do a second lineTo().  The second line starts from where the first ended.",
+		{ message: "Íme, ez történik akkor, ha  egy második lineTo()-t csinálunk.  A második vonal onnan indul, ahol az első vonal befejeződött.",
 		  code: "c.beginPath();\nc.moveTo(30, 20);\nc.lineTo(120, 40);\nc.lineTo(120, 150);\nc.stroke();\n"
 		},
-		{ message: "So, we're drawing a path, a trail of lines all connected together.  We start the path with beginPath() and draw everything with stroke()."
+		{ message: "Mi  így rajzolunk egy utat, egy egymással összekötött  vonalak útvonalát.  Az utat beginPath()-zal kezdjük, és mindent stroke()-kal rajzolunk."
 		},
-		{ message: "If we put a moveTo() before the second lineTo(), we'll move the pen without drawing.  See?",
+		{ message: "Ha mi egy moveTo()-t helyezünk a második lineTo() elé,  akkor a ceruzát mozgatjuk rajzolás nélkül.  Ugye?",
 		  code: "c.beginPath();\nc.moveTo(30, 20);\nc.lineTo(120, 40);\nc.moveTo(120, 60);\nc.lineTo(120, 150);\nc.stroke();\n"
 		},
-		{ message: "You try it!  Add another line, put a second c.lineTo() after the first going to (50, 115).",
+		{ message: "Próbáld ki ezt!  Adj hozzá egy további sort, helyezz el egy második  c.lineTo() az első után, amely az (50,115)-höz megy.",
 		  code: "c.beginPath();\nc.moveTo(100, 30);\nc.lineTo(150, 115);\n\nc.stroke();\n"
 		},
-		{ message: "Did that do what you expected?  Try adding a third line!",
+		{ message: "Megcsináltad azt, amit elvártál?  Próbálj meg egy harmadik sort hozzáadni!",
 		  code: "c.beginPath();\nc.moveTo(100, 30);\nc.lineTo(150, 115);\nc.lineTo(50, 115);\n\nc.stroke();\n"
 		},
-		{ message: "Can you make a triangle?",
+		{ message: "Tudsz egy háromszöget csinálni?",
 		},
-		{ message: "Here is one way, a triangle!",
+		{ message: "Íme, itt egy módszer, egy háromszög!",
 		  code: "c.beginPath();\nc.moveTo(100, 30);\nc.lineTo(150, 115);\nc.lineTo(50, 115);\nc.lineTo(100, 30);\nc.stroke();\n"
 		},
-		{ message: "Okay, an orange triangle.  Like blue better.  Can you make it blue?",
+		{ message: "Ok, egy orange háromszög.  Jobban szereted a blue-t.  Meg tudod csinálni blue-ra?",
 		  code: "c.beginPath();\nc.strokeStyle = \"orange\";\nc.moveTo(100, 30);\nc.lineTo(150, 115);\nc.lineTo(50, 115);\nc.lineTo(100, 30);\nc.stroke();\n"
 		},
-		{ message: "I was trying to make two triangles, but forgot a moveTo().  See what happened?",
+		{ message: "Megpróbáltam két háromszöget csinálni, de elfelejtettem a moveTo()-t.  Látod mi történt?",
 		  code: "c.beginPath();\nc.moveTo(100, 30);\nc.lineTo(150, 115);\nc.lineTo(50, 115);\nc.lineTo(100, 30);\n\nc.lineTo(250, 215);\nc.lineTo(150, 215);\nc.lineTo(200, 130);\nc.stroke();\n"
 		},
-		{ message: "That's not good.  Can you add <span class=tutor-code>c.moveTo(200, 130);</span> to make it two separate triangles?",
+		{ message: "Ez így nem jó.  Hozzá tudsz adni egy  <span class=tutor-code>c.moveTo(200, 130);</span> utasítást, hogy két különálló háromszöget csináljunk?",
 		},
-		{ message: "I want a lot of triangles. We need to use <span class=tutor-code>for</span>!  This for loop draws two triangles.",
+		{ message: "Egy csomó háromszöget szeretnék. A <span class=tutor-code>for</span>-t kell használnunk!  Ez a for ciklus két háromszöget rajzol.",
 		  code: "c.beginPath();\nfor (var i = 30; i <= 60; i = i + 30) {\n  c.moveTo(70 + i, i);\n  c.lineTo(120 + i, 85 + i);\n  c.lineTo(20 + i, 85 + i);\n  c.lineTo(70 + i, i);\n}\nc.stroke();\n",
-		  lessonSection: "Lines and Loops",
+		  lessonSection: "Vonalak és ciklusok",
 		  // tutorImage: 5,
 		},
-		{ message: "This for loop starts at 30 and increases by 30 every time.  So, until it is told to stop, it counts 30, 60, 90, 120...  Right now, the for loop is told to stop at 60."
+		{ message: "Ez a for ciklus 30-nál kezdődik és mindes egyes alkalommal 30-cal növekszik.  Így , addig, amíg nem mondjuk meg, hogy álljon meg, ez elszámol 30, 60, 90, 120...  Jelenleg, a for ciklust úgy állították be, hogy 60-nál álljon meg."
 		},
-		{ message: "So, can you make this for loop draw three triangles? Five?",
+		{ message: "Nos, meg tudod csinálni ezt a  for ciklust úgy, hogy három háromszöget rajzoljon? Ötöt?",
 		},
-		{ message: "Can you make more triangles by changing how the for loop goes up?  What if it counted by 10 each time, so it would count 30, 40, 50, 60... Can you do try that?",
+		{ message: "Tudsz még több háromszöget csinálni a for ciklus megváltoztatásával, hogy hogyan menjen tovább?  Mi van ha  10-zel számol, de  számolhat 30-cal, 40-el, 50-el , 60-al... Ki tudod próbálni ezt?",
 		},
-		{ message: "Aieee!  Look at this!  Forty green triangles!",
+		{ message: "Aieee!  Nézd ezt!  Negyven zöld(green) háromszög!",
 		  code: "c.strokeStyle = \"green\";\nc.beginPath();\nfor (var i = 10; i <= 210; i = i + 5) {\n  c.moveTo(70 + i, i);\n  c.lineTo(120 + i, 85 + i);\n  c.lineTo(20 + i, 85 + i);\n  c.lineTo(70 + i, i);\n}\nc.stroke();\n"
 		},
-		{ message: "Play with it more!  Can you change the color?  Can you make even more triangles?",
+		{ message: "Játssz ezzel tovább!  Meg tudod változtatni a színt?  Tudsz még több háromszöget csinálni?",
 		},
-		
+
 		// Draw a box using lines
-		{ message: "Two boxes, one using strokeRect(), the other using four lines.",
+		{ message: "Két doboz, az egyik a strokeRect()-et használja, a másik négy vonalat használ.",
 		  code: "var size = 100;\n// First box\nc.strokeRect(30, 30, size, size);\n// Second box\nc.beginPath();\nc.moveTo(80, 80);\nc.lineTo(80 + size, 80);\nc.lineTo(80 + size, 80 + size);\nc.lineTo(80, 80 + size);\nc.lineTo(80, 80);\nc.stroke();\n",
-		  lessonSection: "Coding It Easy",
+		  lessonSection: "Könnyü ezt kódolni",
 		},
-		{ message: "Sure takes a lot more code to draw it with lines. Can you add a third box?",
+		{ message: "Egy biztos, a vonalakkal rajzolás több kódot igényel. Hozzá tudsz adni egy harmadik dobozt?",
 		  code: "var size = 100;\n// First box\nc.strokeRect(30, 30, size, size);\n// Second box\nc.beginPath();\nc.moveTo(80, 80);\nc.lineTo(80 + size, 80);\nc.lineTo(80 + size, 80 + size);\nc.lineTo(80, 80 + size);\nc.lineTo(80, 80);\nc.stroke();\n// Third box?\n"
 		},
-		{ message: "strokeRect() is easier, isn't it?  Here are three boxes all using strokeRect(). Can you add a fourth?",
+		{ message: " A strokeRect() könnyebb, nemde?  Íme három doboz, amely mindegyike strokeRect()-t használ. Hozzá tudsz adni egy negyediket?",
 		  code : "var size = 100;\n\nc.strokeRect(30, 30, size, size);\nc.strokeRect(80, 80, size, size);\nc.strokeRect(130, 130, size, size);\n"
 		},
-		{ message: "What if we want even more boxes?  Lots of copying.  Yuck-o.",
-		  lessonSection: "Avoid Repeating Code",
-		}, 
-		{ message: "I know!  Use for loop!  Can you make more boxes for Code Monster?",
+		{ message: "Mi van, ha még több dobozt akarunk?  Rengeted másolás.  Yuck-o.",
+		  lessonSection: "Kerüld el a kódismétlést",
+		},
+		{ message: "Tudom!  Használj for ciklust!  Tudsz csinálni több dobozt a Code Monster számára?",
 		  code: "var size = 100;\n\nfor (var x = 30; x <= 80; x = x + 50) {\n  c.strokeRect(x, x, size, size);\n}\n"
 		},
-		{ message: "Can you make more than ten boxes?  And still fit all of them on the screen?",
+		{ message: "Tudsz csinálni több, mint 10 dobozt?  És még mindegyik  benn van a képernyőn?",
 		},
 		{ message: "Is it easier now to make more boxes? Why is that?",
 		  code: "var size = 100;\nvar num = 3;\nvar offset = 30;\n\nfor (var i = 1; i <= num; i = i + 1) {\n  c.strokeRect(i * offset, i * offset, size, size);\n}\n",
@@ -441,7 +443,7 @@ var lessons =
 		{ message: "Wow!  Five stars, randomly placed, changing every time. Can you have it draw fifty stars? A hundred?  How about bigger stars or smaller stars?",
 		  code: "c.fillStyle = \"gold\";\nvar n = 5;\nvar size = 20;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < n; i = i + 1) {\n  var x = (w - size) * Math.random();\n  var y = (h - size) * Math.random();\n  fillStar(x, y, size);\n}\n\nfunction fillStar(x, y, s) {\n  c.beginPath();\n  c.moveTo(x, y + s * 0.4);\n  c.lineTo(x + s, y + s * 0.4);\n  c.lineTo(x + s * 0.15, y + s * 0.9);\n  c.lineTo(x + s / 2, y);\n  c.lineTo(x + s * 0.85, y + s * 0.9);\n  c.lineTo(x, y + s * 0.4);\n  c.fill();\n}\n",
 		},
-		
+
 		// Draw many lines to point
 		{ message: "Ugh, me tired of seeing stars.  Lines where it's at.  Here two separate lines. See how much is repeated? No like. What can we do?",
 		  code: "c.beginPath();\nc.moveTo(20, 20);\nc.lineTo(200, 20);\nc.stroke();\nc.beginPath();\nc.moveTo(20, 50);\nc.lineTo(200, 50);\nc.stroke();\n",
@@ -537,7 +539,7 @@ var lessons =
 		{ message: "A big clearRect() erases everything.  Uncomment the big clearRect() (remove the <span class=tutor-code>//</span>) and see what happens.",
 		  code: "var size = 80;\nvar offset = 20;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(0, 255, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n// c.clearRect(0, 0, w, h);\noffset = offset + 60;\nc.fillStyle =\"rgba(255, 0, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n"
 		},
-		
+
 		// Comments
 		{ message: "<span class=tutor-code>//</span> at the beginning of a line makes the line get ignored.  That's called commenting out.  Try adding <span class=tutor-code>//</span> before some of the other lines and see what happens!",
 		  code: "var size = 80;\nvar offset = 20;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(0, 255, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n// c.clearRect(0, 0, w, h);\noffset = offset + 60;\nc.fillStyle =\"rgba(255, 0, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n",
@@ -605,7 +607,7 @@ var lessons =
 		},
 		{ message: "Play with it a bit!  Try changing num and angle!",
 		},
-		
+
 		// Draw a branching structure
 		{ message: "Let's say we want to try to draw a tree.  How might you do that?",
 		  code: "",
@@ -634,7 +636,7 @@ var lessons =
 		},
 		{ message: "How can we make this draw two more branches now?"
 		},
-		{ message: "Ah, me know, make function use itself! Can you see what this is doing?",	
+		{ message: "Ah, me know, make function use itself! Can you see what this is doing?",
 		  code: "var w = c.canvas.width;\nvar h = c.canvas.height;\n\ndrawBranch(w/2, h, 100, 0);\n\nfunction drawBranch(x, y, l, direction) {\n  var x2 = x + l * direction;\n  var y2 = y - l;\n  drawLine(x, y, x2, y2);\n  if (l > 20) {\n    // Call drawBranch twice more\n    drawBranch(x2, y2, l / 2, -0.8);\n    drawBranch(x2, y2, l / 2, 0.8);\n  }\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n",
 		  lessonSection: "Recursion",
 		},
@@ -650,7 +652,7 @@ var lessons =
 		  code: "nSquare(4);\n\nfunction nSquare(n) {\n  c.strokeStyle = \"blue\";\n  for (var i = n; i > 0; i = i - 1) {\n    c.strokeRect(i * 30, i * 30, 100, 100);\n  }\n}\nfunction nSquareRecursive(n) {\n  if (n > 1) {\n    nSquareRecursive(n - 1);\n  }\n  c.strokeRect(n * 30, n * 30, 100, 100);\n}\n",
 		},
 		{ message: "Other than not being blue, it's the same, right?  Do you see how they both work?",
-		}, 
+		},
 		{ message: "nSquare() uses a for loop, starts at 4, and counts down: 4, 3, 2, 1.",
 		},
 		{ message: "nSquareRecursive() calls itself with one less each time.  So, when called with 4, it calls itself with 3, and that call calls itself with 2, and that call calls itself with 1.  At one, it says, stop calling yourself, so it stops.  And, on each call, it draws a box located at (n * 30, n * 30).  See?",
@@ -715,7 +717,7 @@ var lessons =
 		{ message: "Great!  Now you have drawn your first branch, moved to the end of that branch, and you're ready to draw more branches!",
 		  code: "function drawBranch(l, direction) {\n  c.fillRect(-1, 0, 2, -l);\n  \n  c.translate(0, -l);\n  \n}\n\nc.translate(200, 250);\ndrawBranch(50, 1);\n",
 		},
-		{ message: "Let's stop for a second and think about what we're going to want to do next.", 
+		{ message: "Let's stop for a second and think about what we're going to want to do next.",
 		},
 		{ message: "This plant is going to split off two branches, one going up, one going off to the side.  We want the ones going off to the side to alternate, first right, then left, then right, then left.",
 		},
@@ -858,7 +860,7 @@ var lessons =
 		},
 		{ message: "The way this works is that, every time we are told to do drawStep(), we erase the screen, move the box, draw the box, and, unless we hit the edge, we say to do drawStep() again a little while later.",
 		},
-		{ message: "Try changing <span class=tutor-code>vx</span>, <span class=tutor-code>vy</span>, and <span class=tutor-code>step</span>. You can change the speed of the box and make it move different directions!"  
+		{ message: "Try changing <span class=tutor-code>vx</span>, <span class=tutor-code>vy</span>, and <span class=tutor-code>step</span>. You can change the speed of the box and make it move different directions!"
 		},
 		{ message: "Try commenting out the clearRect().  That's kind of cool, isn't it?"
 		},
@@ -941,7 +943,7 @@ var lessons =
 		},
 		{ message: "Can you add some more boxes?",
 		},
-		
+
 		// Boxes should rotate themselves, move themselves, update themselves
 		{ message: "So far, we haven't really done that much that requires Box objects.  But let's go a step further.  Let's make boxes that are animated and move!",
 		  lessonSection: "Methods on Objects",
@@ -1034,10 +1036,10 @@ var lessons =
 		},
 		{ message: "Cool simulation, and adds some realism.  Play with it a bit!  Change the friction, add more balls, increase gravity, change timeStep.  Try messing around with it!",
 		},
-		
+
 		// Do mouse events, boxes attracted to mouse, boxes avoiding other boxes but attracted to mouse.
 		{ message: "For our last lessons, let's work a bit with tracking the mouse.  This is a lot of fun!",
-		  code: "",	
+		  code: "",
 		  hiddenCode: "var c = document.getElementById('pane').getContext('2d');\nfunction rgba(r,g,b,a) {return 'rgba('+[r,g,b,a].join(',')+')';}\nfunction rgb(r,g,b,a) {return 'rgb('+[r,g,b].join(',')+')';}\n\n",
 		  lessonSection: "Mouse Events",
 		},
@@ -1079,8 +1081,8 @@ var lessons =
 // To keep JSHint from complaining about variables and functions in
 // the hidden code, list them here.  The boolean is whether they can
 // be overridden by user code.
-var predefForJSHint = {c: true, 
-					   rgb: true, 
+var predefForJSHint = {c: true,
+					   rgb: true,
 					   rgba: true,
 					  };
 

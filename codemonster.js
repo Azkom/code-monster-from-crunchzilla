@@ -33,7 +33,7 @@ var editorOptions = {
 		updatePreviewTimeout = setTimeout(updatePreview, previewUpdateDelay);
 	}
 };
-var editor = 
+var editor =
 	CodeMirror.fromTextArea(document.getElementById('code'), editorOptions);
 
 // Global to keep track if we have reported an error already
@@ -44,14 +44,14 @@ function updatePreview() {
     var okay = JSHINT(code, {'undef': true, browser: true, curly: true, predef: predefForJSHint});
 	if (!okay) {
 		var waitTime = 3000;  // In ms
-		
+
 		// There is an error, but we don't want to show it right away.  Let's give them
 		// time to keep typing and fix it.  If there is no typing for a few seconds, then
 		// show the error.
 		var errorPrompts;
 		if (typeof jsHintErrorPrompts === "undefined") {
-			errorPrompts = [ "Oops! Looks like there is a problem where you typed",
-							 "If it helps, the error may be:" ];
+			errorPrompts = [ "Hoppá! Úgy tűnik probléma van ott, ahol gépeltél",
+							 "Ha ez segít, a hiba esetleg ez:" ];
 		} else {
 			// For internationalization, this variable in the lessons JSON file can
 			// override the English version of the prompt
@@ -156,7 +156,7 @@ function additionalSyntaxChecks(code) {
 //      doSomething()
 // because it only instruments blocks (indicated by brackets {}),
 // but that is also not a huge deal.
-// Note: This uses the CodeMirror parser (which we already have loaded).  
+// Note: This uses the CodeMirror parser (which we already have loaded).
 // Other options are the esprima, uglify, or jshint parsers.
 function instrumentCodeForInfiniteLoops(code) {
 	var mode = CodeMirror.getMode(editorOptions, editorOptions.mode);
@@ -195,7 +195,7 @@ function instrumentCodeForInfiniteLoops(code) {
 	// positions of other brackets we might need to instrument.
 	for (var i = bracketPositions.length - 1; i >= 0; i--) {
 		// Add a simple but effective stop on long running code.
-		code = code.slice(0, bracketPositions[i]) + 
+		code = code.slice(0, bracketPositions[i]) +
 			'cmRunStepCount++; if (cmRunStepCount > 1000000) {throw Error("Execution limit exceeded. Infinite loop?");}' +
 			code.slice(bracketPositions[i]);
 	}
@@ -286,7 +286,7 @@ function initCode(initLessonSection) {
 	}
 	for (var i = currentLesson; i >= 0; i--) {
 		if (lessons[i].lessonSection != null) {
-			// Copy the lessonSection from the last one 
+			// Copy the lessonSection from the last one
 			// where it was defined
 			lessons[currentLesson].lessonSection = lessons[i].lessonSection;
 			break;
@@ -294,14 +294,14 @@ function initCode(initLessonSection) {
 	}
 	for (var i = currentLesson; i >= 0; i--) {
 		if (lessons[i].tutorImage != null) {
-			// Copy the tutorImage from the last one 
+			// Copy the tutorImage from the last one
 			// where it was defined
 			lessons[currentLesson].tutorImage = lessons[i].tutorImage;
 			break;
 		}
 	}
 }
-	
+
 function nextLesson() {
 	currentLesson += 1;
 	// Don't advance past the beginning or end
@@ -367,9 +367,9 @@ function initLesson() {
 	if (lesson.tutorImage != null) {
 		changeTutorImage(tutorImages[lesson.tutorImage - 1]);
 	}
-	
+
 	if (lesson.hiddenCode != null) {
-		// It's important to set this before calling updatePreview 
+		// It's important to set this before calling updatePreview
 		// below since it will be used in that code.
 		hiddenCode = lesson.hiddenCode;
 	}
@@ -418,7 +418,7 @@ function jumpToLesson(lessonNum) {
 	// ... but always show the current lesson
 	var lessonNum = $('#lesson-number');
 	lessonNum.stop(true).fadeOut(50, function() {
-		// Bit of a hack, saves the first word of the string (which should be the word "Lesson", 
+		// Bit of a hack, saves the first word of the string (which should be the word "Lesson",
 		// then appends the new lesson number. Done this way for internationalization.
 		lessonNum.html(lessonNum.html().split(" ")[0] + " " + (currentLesson+1));
 		lessonNum.fadeIn(100).fadeOut(700);
@@ -448,13 +448,13 @@ $('.info-link').click( function(evt) {
 	id = "#" + id;
 	// Open the modal dialog using the content for that id
 	$(id).modal({
-		onOpen: function(d) { 
+		onOpen: function(d) {
 			// We could make these sequential, but they look good in parallel
 			d.overlay.fadeIn(300);
 			d.container.fadeIn(700);
 			d.data.fadeIn(1000);
 		},
-		onClose: function(d) { 
+		onClose: function(d) {
 			d.data.fadeOut(200);
 			d.container.fadeOut(200);
 			// $.model.close() needs to be called at the end to clean up
