@@ -338,7 +338,7 @@ var lessons =
 		// Draw a box using lines
 		{ message: "Két doboz, az egyik a strokeRect()-et használja, a másik négy vonalat használ.",
 		  code: "var size = 100;\n// First box\nc.strokeRect(30, 30, size, size);\n// Second box\nc.beginPath();\nc.moveTo(80, 80);\nc.lineTo(80 + size, 80);\nc.lineTo(80 + size, 80 + size);\nc.lineTo(80, 80 + size);\nc.lineTo(80, 80);\nc.stroke();\n",
-		  lessonSection: "Könnyü ezt kódolni",
+		  lessonSection: "Kódolj könnyen",
 		},
 		{ message: "Egy biztos, a vonalakkal rajzolás több kódot igényel. Hozzá tudsz adni egy harmadik dobozt?",
 		  code: "var size = 100;\n// First box\nc.strokeRect(30, 30, size, size);\n// Second box\nc.beginPath();\nc.moveTo(80, 80);\nc.lineTo(80 + size, 80);\nc.lineTo(80 + size, 80 + size);\nc.lineTo(80, 80 + size);\nc.lineTo(80, 80);\nc.stroke();\n// Third box?\n"
@@ -352,231 +352,231 @@ var lessons =
 		{ message: "Tudom!  Használj for ciklust!  Tudsz csinálni több dobozt a Code Monster számára?",
 		  code: "var size = 100;\n\nfor (var x = 30; x <= 80; x = x + 50) {\n  c.strokeRect(x, x, size, size);\n}\n"
 		},
-		{ message: "Tudsz csinálni több, mint 10 dobozt?  És még mindegyik  benn van a képernyőn?",
+		{ message: "Tudsz több, mint 10 dobozt csinálni?  És még mindegyik  benn van a képernyőn?",
 		},
-		{ message: "Is it easier now to make more boxes? Why is that?",
+		{ message: "Most könnyebb több dobozt csinálni? Miért van ez?",
 		  code: "var size = 100;\nvar num = 3;\nvar offset = 30;\n\nfor (var i = 1; i <= num; i = i + 1) {\n  c.strokeRect(i * offset, i * offset, size, size);\n}\n",
-		  lessonSection: "Variables Make It Easy Too",
+		  lessonSection: "Változók szintén megkönnyítik ezt.",
 		},
-		{ message: "This works by having <span class=tutor-code>i</span> count up 1, 2, 3... then putting each box's (left, top) at <span class=tutor-code>i * offset</span>, so, since offset is 30, the top left of the first box is (30, 30), the second is at (60, 60), then (90, 90) ...",
+		{ message: "Ez úgy működik, hogy van egy <span class=tutor-code>i</span> változónk, amely számol  1, 2, 3... azután minden egyes doboz (left, top)  értékének az  <span class=tutor-code>i * offset</span> értéket adja, így, mivel  az offset értéke 30,  az első doboz top left értéke (30, 30), a másodiké (60, 60), majd (90, 90) ...",
 		},
-		{ message: "Try changing size, num, and offset.  See what happens?  Play with it!",
+		{ message: "Próbáld megváltoztatni a size, num, and offset értékét.  Látod mi történik?  Játssz ezzel!",
 		},
-		{ message: "It's often good to have variables that control things (like size, num, and offset) together so they are easy to change.  Like it?"
+		{ message: "Legtöbbször jó az, ha változók vannak arra, hogy dolgokat vezéreljenek (pl. size, num, és offset) együttesen, így könnyű őket megváltoztatni.  Szereted ezt?"
 		},
 
 		// Quiz
-		{ message: "Can you show me some of what you know? Draw a box. <br>Hint: <span class=tutor-code>c.strokeRect(<i>left, top, width, height</i>);</span> draws a box.",
+		{ message: "Meg tudod mutatni nekem, hogy mit tudsz? Rajzolj egy dobozt. <br>Tipp: A <span class=tutor-code>c.strokeRect(<i>left, top, width, height</i>);</span>  egy dobozt  rajzol.",
 		  code: "",
-		  lessonSection: "Quiz: For Loops",
+		  lessonSection: "Teszt: For ciklusok",
 		},
-		{ message: "Now draw four boxes. Hint: Making four boxes is easy using for. Remember, for loop look like this: <span class=tutor-code>for (var i = 0; i < 3; i += 1) {</span>",
-		  code: ""
+		{ message: "Most rajzolj négy dobozt. Tipp: Négy doboz elkészítése könnyű a for használatával. Emlékezz, a for ciklus a következőképpen néz ki: <span class=tutor-code>for (var i = 0; i < 3; i += 1) { }</span>",
+		 code: ""
 		},
-		{ message: "Can you make it so you can change the size of all your boxes all at once? Hint: To make a variable named size set to 50, you use <span class=tutor-code>var size = 50;</span>"
+		{ message: "Meg tudod ezt úgy csinálni, hogy az összes dobozod  összes méretét egyidőben változtasd meg? Tipp: Egy size nevű és 50 értékű változót, a  <span class=tutor-code>var size = 50;</span> használatával hozhatunk létre"
 		},
-		{ message: "Wow, you're learning to program!  Lots of ways you could do this, but did you get something like this? If not, try changing some stuff, figure out how it works!",
+		{ message: "Wow, programozni tanulsz!  Számos módja van annak, ahogy ezt csinálhatod, de valami hasonlót kaptál, mint ez? Ha nem, próbálj kicserélni néhány dolgot, találd ki ez hogyan működik!",
 		  code: "var size = 50;\n\nfor (var i = 0; i < 4; i += 1) {\n  var x = 80 + 30 * i;\n  var y = 80 + 10 * i;\n  c.strokeRect(x, y, size, size);\n}\n",
 		},
 
 		// Functions and squares
-		{ message: "Code Monster no like repeating self.  No like.  No like.  For loops avoid repeating.  Me now show you functions too. Functions also avoid repeating.",
+		{ message: "Code Monster nem szereti ismételni magát. Nem szereti. Nem szereti.  For ciklusok elkerülik az ismétlést.  Most mutasd meg nekem a függvényt is. A függvények szintén elkerülik az ismétlést.",
 		  code: "// All work and no play\n// make monster a dull boy\n// All work and no play\n// make monster a dull boy\n// All work and no play\n// make monster a dull boy\n",
-		  lessonSection: "Your Own Functions",
+		  lessonSection: "A te saját függvényeid",
 		},
-		{ message: "This is a new function, strokeSquare().  It is just like strokeRect(), but draws squares.",
+		{ message: "Ez egy új függvény,  a  strokeSquare().  Ez hasonló, mint a  strokeRect(), de négyzeteket rajzol.",
 		  code: "function strokeSquare(left, top, size) {\n  c.strokeRect(left, top, size, size);\n}\n\nstrokeSquare(30, 100, 50);\nstrokeSquare(10, 10, 200);\nstrokeSquare(50, 50, 10);\n"
 		},
-		{ message: "strokeSquare() uses strokeRect() to draw a rectangle with the same width and height. See how it works?"
+		{ message: " A strokeSquare() a strokeRect()-et hasznája, hogy egy téglalapot  rajzoljon azonos szélességgel és magasággal. Látod, hogyan működik?"
 		},
-		{ message: "So, the first square starts at (30, 100) and then has a height and width of 50. See?",
+		{ message: "Íme, az első négyzet a (30, 100) pozíciónál indul és 50-es a szélessége és a magassága. Látod?",
 		},
-		{ message: "Can you add a fourth square below the others using strokeSquare()?",
+		{ message: "Hozzá tudsz adni egy negyedik négyzetet a többiek alatt, a strokeSquare() használatával?",
 		},
 
 		// Draw a star
-		{ message: "Ooo! A star! Pretty! Change some of the numbers!  Mess it up!",
+		{ message: "Ó! Egy csillag! Csodás! Változtass meg néhány számot!  Elrontottad!",
 		  code: "c.beginPath();\nc.moveTo(50, 100);\nc.lineTo(150, 100);\nc.lineTo(65, 150);\nc.lineTo(100, 60);\nc.lineTo(135, 150);\nc.lineTo(50, 100);\nc.stroke();\n",
-		  lessonSection: "More Lines",
+		  lessonSection: "Több vonal",
 		},
-		{ message: "Wait, stars aren't green.  Can you make it yellow or gold?",
+		{ message: "Várj, a csillagok nem zöldek.  Yellow (sárga) vagy gold(arany) színűvé tudod tenni?",
 		  code: "c.strokeStyle = \"green\";\nc.beginPath();\nc.moveTo(50, 100);\nc.lineTo(150, 100);\nc.lineTo(65, 150);\nc.lineTo(100, 60);\nc.lineTo(135, 150);\nc.lineTo(50, 100);\nc.stroke();\n"
 		},
-		{ message: "Ooo! A solid gold star! Did you know you can do that? Change some of the numbers!  Mess it up!",
+		{ message: "Ó! Egy tömör gold (arany) csillag!  Tudod, hogyan kell ezt csinálni? Változtass meg néhány számot!  Elrontottad!",
 		  code: "c.fillStyle = \"gold\";\nc.beginPath();\nc.moveTo(50, 100);\nc.lineTo(150, 100);\nc.lineTo(65, 150);\nc.lineTo(100, 60);\nc.lineTo(135, 150);\nc.lineTo(50, 100);\nc.fill();\n"
 		},
-		{ message: "Variables make it easy to change and add more stars. Try changing x, y, and size (or anything else)!",
+		{ message: "A változók megkönnyítik azt, hogy több csillagot megváltoztass vagy hozzáadj. Próbáld megváltoztatni az x,  az y, és a size (vagy bármelyik másik) értékét!",
 		  code: "c.fillStyle = \"gold\";\n\nvar x = 50;\nvar y = 100;\nvar size = 100;\n\nc.beginPath();\nc.moveTo(x, y);\nc.lineTo(x + size, y);\nc.lineTo(x + size * 0.15, y + size * 0.5);\nc.lineTo(x + size / 2, y - size * 0.4);\nc.lineTo(x + size * 0.85, y + size * 0.5);\nc.lineTo(x, y);\nc.fill();\n"
 		},
-		{ message: "Here are two stars, but all that repeating myself hurts. No like. What we do?",
+		{ message: "Itt van két csillag, de minden ismétlés  fáj nekem. Nem szeretem. Mit tegyünk?",
 		  code: "c.fillStyle = \"gold\";\n\nvar x = 50;\nvar y = 100;\nvar size = 100;\n\nc.beginPath();\nc.moveTo(x, y);\nc.lineTo(x + size, y);\nc.lineTo(x + size * 0.15, y + size * 0.5);\nc.lineTo(x + size / 2, y - size * 0.4);\nc.lineTo(x + size * 0.85, y + size * 0.5);\nc.lineTo(x, y);\nc.fill();\nx += 100;\ny += 50;\nc.beginPath();\nc.moveTo(x, y);\nc.lineTo(x + size, y);\nc.lineTo(x + size * 0.15, y + size * 0.5);\nc.lineTo(x + size / 2, y - size * 0.4);\nc.lineTo(x + size * 0.85, y + size * 0.5);\nc.lineTo(x, y);\nc.fill();\n"
 		},
-		{ message: "Functions! It's fillStar()! Can you add a third star?",
+		{ message: "Függvények! Ez a  fillStar() ! Hozzá tudsz adni egy harmadik csillagot?",
 		  code: "c.fillStyle = \"gold\";\nvar size = 100;\n\nfunction fillStar(x, y, s) {\n  c.beginPath();\n  c.moveTo(x, y);\n  c.lineTo(x + s, y);\n  c.lineTo(x + s * 0.15, y + s * 0.5);\n  c.lineTo(x + s / 2, y - s * 0.4);\n  c.lineTo(x + s * 0.85, y + s * 0.5);\n  c.lineTo(x, y);\n  c.fill();\n}\n\nfillStar(50, 100, size);\nfillStar(150, 150, size);",
-		  lessonSection: "More Functions",
+		  lessonSection: "További függvények",
 		},
-		{ message: "Four stars in a row!  Can you make it eight?",
+		{ message: "Négy csillag a sorban!  Tudsz 8-at csinálni?",
 		  code: "c.fillStyle = \"gold\";\nvar size = 40;\n\nfunction fillStar(x, y, s) {\n  c.beginPath();\n  c.moveTo(x, y);\n  c.lineTo(x + s, y);\n  c.lineTo(x + s * 0.15, y + s * 0.5);\n  c.lineTo(x + s / 2, y - s * 0.4);\n  c.lineTo(x + s * 0.85, y + s * 0.5);\n  c.lineTo(x, y);\n  c.fill();\n}\n\nfor (var i = 0; i < 4; i = i + 1) {\n  fillStar(i * size, 50, size);\n}\n",
 		},
-		{ message: "Two loops!  Try changing size or the number of stars!",
+		{ message: "Két ciklus!  Próbáld megváltoztatni a size vagy a csillagok száma értékét!",
 		  code: "c.fillStyle = \"gold\";\nvar size = 40;\n\nfor (var i = 0; i < 5; i = i + 1) {\n  for (var j = 0; j < 3; j = j + 1) {\n    fillStar(i * size, j * size, size);\n  }\n}\n\nfunction fillStar(x, y, s) {\n  c.beginPath();\n  c.moveTo(x, y + s * 0.4);\n  c.lineTo(x + s, y + s * 0.4);\n  c.lineTo(x + s * 0.15, y + s * 0.9);\n  c.lineTo(x + s / 2, y);\n  c.lineTo(x + s * 0.85, y + s * 0.9);\n  c.lineTo(x, y + s * 0.4);\n  c.fill();\n}\n",
-		  lessonSection: "Nested Loops",
+		  lessonSection: "Beágyazott ciklusok",
 		  // tutorImage: 6,
 		},
-		{ message: "Did you know you could do two loops like that, one inside the other?",
+		{ message: "Tudtad, két ciklust tudsz csinálni, mint ez, az egyik a másikon belül van?",
 		},
-		{ message: "Do you know how it works?",
+		{ message: "Tudod, ez hogyan működik?",
 		},
-		{ message: "<span class=tutor-code>j</span> will count 0, 1, 2.  The first time <span class=tutor-code>j</span> counts 0, 1, 2, <span class=tutor-code>i</span> will be 0.  The next time j counts 0, 1, 2, i will be 1.",
+		{ message: "A <span class=tutor-code>j</span> növekszik 0, 1, 2.  Első ciklusban a  <span class=tutor-code>j</span> növekszik 0, 1, 2,  az <span class=tutor-code>i</span>  0 lesz.  A következő ciklusban a j növekszik 0, 1, 2, az  i  1 lesz.",
 		  code: "c.fillStyle = \"gold\";\nvar size = 40;\n\nfor (var i = 0; i < 5; i = i + 1) {\n  for (var j = 0; j < 3; j = j + 1) {\n    fillStar(i * size, j * size, size);\n  }\n}\n\nfunction fillStar(x, y, s) {\n  c.beginPath();\n  c.moveTo(x, y + s * 0.4);\n  c.lineTo(x + s, y + s * 0.4);\n  c.lineTo(x + s * 0.15, y + s * 0.9);\n  c.lineTo(x + s / 2, y);\n  c.lineTo(x + s * 0.85, y + s * 0.9);\n  c.lineTo(x, y + s * 0.4);\n  c.fill();\n}\n",
 		},
-		{ message: "So, for the first star, i = 0 and j = 0.  On the second star, i = 0 and j = 1.  Third, i = 0 and j = 2. Then, i = 1 and j = 0, i = 1 and j = 1, i = 1 and j = 2, and so on.",
+		{ message: "Így , az első csillag esetében az i = 0 és a j = 0.  A második csillag esetében az i = 0  és a j = 1.  Harmadik, i = 0 és j = 2. Majd, i = 1 és j = 0, i = 1 és j = 1, i = 1 és j = 2, stb.",
 		},
-		{ message: "Can you figure out what order it draws the stars?  Which star is drawn first?  Which star is the second star drawn?",
+		{ message: "Ki tudod találni, hogy ez milyen sorrendben rajzolja a  csillagokat?  Melyik csillagot rajzolja meg elsőként?  Melyik a másodjára megrajzolt csillag?",
 		},
-		{ message: "The first star will be the one at the top left.  The second drawn is the one below it.  Do you see why?",
+		{ message: "A bal felső lesz az első csillag.  A második az alatta levő.  Látod miért?",
 		},
-		{ message: "Wow!  Full of stars! Try changing size!",
+		{ message: "Wow!  MIndenütt csillag! Próbáld size-t megváltoztatni!",
 		  code: "c.fillStyle = \"gold\";\nvar size = 40;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\nvar maxI = Math.floor(w / size);\nvar maxJ = Math.floor(h / size);\n\nfor (var i = 0; i < maxI; i = i + 1) {\n  for (var j = 0; j < maxJ; j = j + 1) {\n    fillStar(i * size, j * size, size);\n  }\n}\n\nfunction fillStar(x, y, s) {\n  c.beginPath();\n  c.moveTo(x, y + s * 0.4);\n  c.lineTo(x + s, y + s * 0.4);\n  c.lineTo(x + s * 0.15, y + s * 0.9);\n  c.lineTo(x + s / 2, y);\n  c.lineTo(x + s * 0.85, y + s * 0.9);\n  c.lineTo(x, y + s * 0.4);\n  c.fill();\n}\n",
-		  lessonSection: "Fun with Stars",
+		  lessonSection: "Móka csillagokkal",
 		},
-		{ message: "Wow!  Five stars, randomly placed, changing every time. Can you have it draw fifty stars? A hundred?  How about bigger stars or smaller stars?",
+		{ message: "Wow!  Öt csillag, véletlenül elhelyezve, minden egyes alkalommal változik.Tudsz 50 csillagot rajzolni? Százat?  Mi újság a nagyobb és a kisebb csillagokkal?",
 		  code: "c.fillStyle = \"gold\";\nvar n = 5;\nvar size = 20;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < n; i = i + 1) {\n  var x = (w - size) * Math.random();\n  var y = (h - size) * Math.random();\n  fillStar(x, y, size);\n}\n\nfunction fillStar(x, y, s) {\n  c.beginPath();\n  c.moveTo(x, y + s * 0.4);\n  c.lineTo(x + s, y + s * 0.4);\n  c.lineTo(x + s * 0.15, y + s * 0.9);\n  c.lineTo(x + s / 2, y);\n  c.lineTo(x + s * 0.85, y + s * 0.9);\n  c.lineTo(x, y + s * 0.4);\n  c.fill();\n}\n",
 		},
 
 		// Draw many lines to point
-		{ message: "Ugh, me tired of seeing stars.  Lines where it's at.  Here two separate lines. See how much is repeated? No like. What can we do?",
+		{ message: "Uh,fáraszt a csillagok nézése.  Itt van két különálló vonal. Látod mennyire ismétlődik? Nem szeretem. Mit tudunk tenni?",
 		  code: "c.beginPath();\nc.moveTo(20, 20);\nc.lineTo(200, 20);\nc.stroke();\nc.beginPath();\nc.moveTo(20, 50);\nc.lineTo(200, 50);\nc.stroke();\n",
-		  lessonSection: "Even More Functions",
+		  lessonSection: "Még több függvény",
 		},
-		{ message: "Need drawLine() function.  Here it is.  Now draw one line from (20, 20) to (200, 20) and another from (20, 50) to (200, 50).",
+		{ message: "Kell egy drawLine() függvény.  Itt van.  Most rajzolj egy vonalat (20, 20)-tól  (200, 20)-ig és egy másikat (20, 50)-tól (200, 50)-ig.",
 		  code: "function drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n\n"
 		},
-		{ message: "Did you get it? Here is one version.  Can you add a third line below the other two?",
+		{ message: "Megvan? Íme egy változat.  Hozzá tudsz adni egy harmadik vonalat a másik kettő alá?",
 		  code: "function drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n\ndrawLine(20, 20, 200, 20);\ndrawLine(20, 50, 200, 50);\n"
 		},
-		{ message: "Three vertical lines using for loop.  Can you make it ten lines?",
+		{ message: "Három függőleges vonal, amely cilklust használ.  Tudsz 10 vonalat csinálni?",
 		  code: "function drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n\nfor (var i = 0; i < 3; i = i + 1) {\n  var x = 20 + i * 30;\n  drawLine(x, 20, x, 200);\n}\n",
-		  lessonSection: "Fun with Lines",
+		  lessonSection: "Móka vonalakkal",
 		},
-		{ message: "Ten lines coming to a point.  Try moving the point!",
+		{ message: "Tíz vonal egy pontban végződik.  Próbáld mozgatni a pontot!",
 		  code: "function drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n\nvar px = 200;\nvar py = 150;\nfor (var i = 0; i < 10; i = i + 1) {\n  var y = i * 30;\n  drawLine(0, y, px, py);\n}\n"
 		},
-		{ message: "Ready for something harder?  Now the lines fan to the right.  Can you also add in the ones we saw last, going to the left?",
+		{ message: "Kész vagy valami keményebbre?  Nos a vonalak most jobbra  \"legyeznek\".  Hozzá tudod adni azt, amit legutóbb láttunk, Balra mennek?",
 		  code: "function drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n\nvar px = 200;\nvar py = 150;\nfor (var i = 0; i < 10; i = i + 1) {\n  var y = i * 30;\n  drawLine(400, y, px, py);\n}\n"
 		},
-		{ message: "Did you get it?  This is one way to do it.  Try moving the point now!",
+		{ message: "Megvan?  Ez az egyik módja annak, hogy megcsináld.  Most próbáld mozgatni a pontot!",
 		  code: "function drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n\nvar px = 200;\nvar py = 150;\nfor (var i = 0; i < 10; i = i + 1) {\n  var y = i * 30;\n  drawLine(0, y, px, py);\n  drawLine(400, y, px, py);\n}\n"
 		},
-		{ message: "Ooo!  Me like!  Try changing num, px, or py!",
+		{ message: "O!  Szeret engem!  Próbáld megváltoztatni a num, a px, vagy a py értéket!",
 		  code: "var num = 20;\nvar px = 200;\nvar py = 150;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < num; i = i + 1) {\n  var y = i * h / (num - 1);\n  drawLine(400, y, px, py);\n  var x = y * w / h;\n  drawLine(x, 300, px, py);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
-		{ message: "Can you make lines from all sides?  You will need four drawLine() and your two new ones will use 0 instead of w and h.  Can you do it?",
+		{ message: "Tudsz vonalakat csinálni mindegyik oldalról?  Négy  drawLine() függvény szükséges és a te kettő újad 0-t használ  a w és a h helyett.  Meg tudod csinálni?",
 		  code: "var num = 20;\nvar px = 200;\nvar py = 150;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < num; i = i + 1) {\n  var y = i * h / (num - 1);\n  drawLine(w, y, px, py);\n  var x = y * w / h;\n  drawLine(x, h, px, py);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
-		{ message: "I like mine blue.  Play with it!",
+		{ message: "Az enyémet kéken (blue) szeretem.  Játssz vele!",
 		  code: "var num = 10;\nvar px = 200;\nvar py = 150;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.strokeStyle = \"blue\";\nfor (var i = 0; i < num; i = i + 1) {\n  var y = i * h / (num - 1);\n  drawLine(0, y, px, py);\n  drawLine(w, y, px, py);\n  var x = y * w / h;\n  drawLine(x, 0, px, py);\n  drawLine(x, h, px, py);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
 
 		// Fan curves
-		{ message: "When me little monster, me draw these.  You like too?  Change number of lines!",
+		{ message: "When me little monster, me draw these.  Szereted te is?  Változtasd meg a vonalak számát!",
 		  code: "var num = 10;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < num; i = i + 1) {\n  var x = i * w / (num - 1);\n  var y = i * h / (num - 1);\n  drawLine(0, y, x, h);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n",
-		  lessonSection: "More Fun with Lines",
+		  lessonSection: "Még több móka a vonalakkal",
 		},
-		{ message: "Can you add another curve at top right? You will need another drawLine() but use x, 0, w, y.",
+		{ message: "Hozzá tudsz adni egy további görbét a jobb felső pozícióba?  Egy további  drawLine()-ra lesz szükséged, de használd az x, 0, w, y paramétereket.",
 		  code: "var num = 10;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < num; i = i + 1) {\n  var x = i * w / (num - 1);\n  var y = i * h / (num - 1);\n  drawLine(0, y, x, h);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
-		{ message: "Pretty!  Try other colors and changing the number of lines!",
+		{ message: "Csodás!  Próbálj más színeket és változtasd meg a vonalak számát!",
 		  code: "var num = 30;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.strokeStyle = \"gold\";\nfor (var i = 0; i < num; i = i + 1) {\n  var x = i * w / (num - 1);\n  var y = i * h / (num - 1);\n  drawLine(0, y, x, h);\n  drawLine(x, 0, w, y);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
-		{ message: "Can you make it so the two curves are two different colors?",
+		{ message: "Meg tudod ezt úgy csinálni, hogy a két görbe két különböző színű legyen?",
 		},
-		{ message: "Here is one version.  Try changing the colors!",
+		{ message: "Íme egy verzió.  Próbáld megváltozatni a színeket!",
 		  code: "var num = 30;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < num; i = i + 1) {\n  var x = i * w / (num - 1);\n  var y = i * h / (num - 1);\n  c.strokeStyle = \"gold\";\n  drawLine(0, y, x, h);\n  c.strokeStyle = \"red\";\n  drawLine(x, 0, w, y);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
-		{ message: "Here is a crazy fun random colors changing version.  It's complicated, but take a look.  Can you guess how it works? And try changing num!",
+		{ message: "Íme egy őrült mókás színeket véletlenül cserélő változat.  Ez komplikált, de pillants rá.  Ki tudod találni, hogyan működik? És próbáld megváltoztatni a  num értékét!",
 		  code: "var num = 30;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nfor (var i = 0; i < num; i = i + 1) {\n  var x = i * w / (num - 1);\n  var y = i * h / (num - 1);\n  c.strokeStyle = randomRGBA();\n  drawLine(0, y, x, h);\n  c.strokeStyle = randomRGBA();\n  drawLine(x, 0, w, y);\n}\n\nfunction randomRGBA() {\n  var r = randInt(255);\n  var g = randInt(255);\n  var b = randInt(255);\n  var a = Math.random();\n  var rgba = [r,g,b,a].join(\",\");\n  return \"rgba(\" + rgba + \")\";\n}\nfunction randInt(limit) {\n  var x = Math.random() * limit;\n  return Math.floor(x);\n}\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
 
 		// Quiz
-		{ message: "You know programming?  Show me!  Can make a function called fillSquare() and then use that to draw a second bigger square? Hint: You'll need something like <span class=tutor-code>function fillSquare(left, top, size) {</span>",
+		{ message: "Te ismered a programozást? Mutasd meg nekem!  Tudsz csinálni egy fillSquare() nevű függvényt, és utána használd ezt arra, hogy egy második nagyobb négyzetet rajzolj ? Tipp: Szükséged lesz valamire, mint a  <span class=tutor-code>function fillSquare(left, top, size) { } függvény.</span>",
 		  code: "c.fillRect(20, 30, 100, 100);\n",
-		  lessonSection: "Quiz: Functions",
+		  lessonSection: "Teszt: Függvények",
 		},
-		{ message: "Did you get it?  Something like this? Now can you make the first square also use fillSquare() instead of calling fillRect()?",
+		{ message: "Megvan?  Valami ilyesmi? Nos, meg tudod csinálni, hogy az első négyzet is a fillSquare()-t használja a  fillRect() hívása helyett?",
 		  code: "c.fillRect(20, 30, 100, 100);\n\nfillSquare(200, 70, 150);\nfunction fillSquare(x, y, s) {\n  c.fillRect(x, y, s, s);\n}\n",
 		},
-		{ message: "Look, one line. Huh. Want more. It would be easier to add more lines if we had that drawLine() function again.  Can you write that and then make this line use it? Hint: Create a function with <span class=tutor-code>function doStuff(a, b, c, d) {</span>",
+		{ message: "Nézd, egy vonal. Huh. Többet akarok. Több vonal hozzáadása könnyebb lenne, ha van egy  drawLine() függvényünk ismét. Meg tudod írni ezt és utána a vonalak készítésére használni ? Tipp: Készíts egy függvényt a <span class=tutor-code>function doStuff(a, b, c, d) { } használatával.<br> Figyelem: a c-vel vigyázz, mert az már foglalt!</span>",
 		  code:"c.beginPath();\nc.moveTo(30, 20);\nc.lineTo(200, 50);\nc.stroke();\n"
 		},
-		{ message: "Ahh, isn't that better?  Add another line below this one.  Wasn't that easy now?",
+		{ message: "Ahh, nem jobb ez? Adj hozzá egy további vonalat a jelenlegi alá.  Nem volt ez könnyebb most?",
 		  code: "drawLine(30, 20, 200, 50);\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
-		{ message: "So easy to add more lines, I want lots more.  Give me ten lines total, one on top of the other, separated by 10! Hint: Easier with for loop. For loop looks like <span class=tutor-code>for (var i = 0; i < 3; i += 1) {</span>",
+		{ message: "Így könnyű további vonalak hozzáadása, Sok vonalat akarok.  Adj nekem összesen 10 vonalat , egyik a másiknak a tetején, 10-zel elválasztva! Tipp: For ciklussal könnyebb. For ciklus így néz ki <span class=tutor-code>for (var i = 0; i < 3; i += 1) { }</span>",
 		},
-		{ message: "You get something like this?  You getting good!  Try playing with the numbers! I like n of 40 and dy of 5!",
+		{ message: "Valami ehhez hasonlót kaptál?  Jobban vagy!  Próbálj játszani a számokkal! Én az n = 40 és a dy = 5 -t szeretem!",
 		  code: "var n = 10;\nvar dy = 10;\nfor (var i = 0; i < n; i = i + 1) {\n  var y = 20 + i * dy;\n  drawLine(30, y, 200, y + 30);\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n",
 		},
 
 		// Two boxes and a white box
-		{ message: "Me miss boxes.  Hey, look, boxes, can erase!  Try moving the white box from (50, 50) to (20, 20)!",
+		{ message: "Nekem hiányoznak a dobozok.  Hey, nézd, dobozok, tudod törölni!  Próbáld a fehér dobozt mozgatni (50, 50)-től (20, 20)-ig!",
 		  code: "function fillSquare(w, h, s) {\n  c.fillRect(w, h, s, s);\n}\n\nc.fillStyle = \"blue\";\nfillSquare(10, 10, 100);\nfillSquare(100, 100, 100);\nc.fillStyle = \"white\";\nfillSquare(50, 50, 100);\n",
-		  lessonSection: "Erasing",
+		  lessonSection: "Törlés",
 		},
-		{ message: "Order matters.  Last one to draw gets to stay!  Try moving the white box now!",
+		{ message: "Sorrendi ügyek.  Last one to draw gets to stay!  Próbáld most mozgatni a fehér dobozt!",
 		  code: "function fillSquare(w, h, s) {\n  c.fillRect(w, h, s, s);\n}\n\nc.fillStyle = \"blue\";\nfillSquare(10, 10, 100);\nc.fillStyle = \"white\";\nfillSquare(50, 50, 100);\nc.fillStyle = \"blue\";\nfillSquare(100, 100, 100);\n"
 		},
 
 		// Make a little face using a box and clearRect()
-		{ message: "Another way to erase is with clearRect().  Can you make a little blue smiley face using these?  It is almost done.  You just need to move them.",
+		{ message: "További módszer a  clearRect()-tel törlés. Ennek felhasználásával tudsz egy kék  smiley arcot csinálni?  Ez majdnem megvan.  Csak mozgatnod kell  őket.",
 		  code: "c.fillStyle = \"blue\";\nc.fillRect(50, 20, 200, 200);\n// Eyes\nc.clearRect(80, 150, 20, 20);\nc.clearRect(120, 150, 20, 20);\n// Mouth\nc.clearRect(70, 50, 100, 10);\n"
 		},
-		{ message: "Me like this guy.  Ooo, friend.",
+		{ message: "Nekem tetszik ez a fickó.  Ó, barátom.",
 		  code: "c.fillStyle = \"blue\";\nc.fillRect(50, 20, 200, 200);\n// Eyes\nc.clearRect(80, 50, 20, 20);\nc.clearRect(150, 50, 20, 20);\n// Mouth\nc.clearRect(70, 150, 100, 10);\n"
 		},
 
 		// Clearing the screen
-		{ message: "A big clearRect() erases everything.  Uncomment the big clearRect() (remove the <span class=tutor-code>//</span>) and see what happens.",
+		{ message: "Egy nagy clearRect() mindent töröl.  Szüntesd meg a nagy clearRect() előtti megjegyzést (töröld a <span class=tutor-code>//</span> írásjelet)  és nézd meg mi történik.",
 		  code: "var size = 80;\nvar offset = 20;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(0, 255, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n// c.clearRect(0, 0, w, h);\noffset = offset + 60;\nc.fillStyle =\"rgba(255, 0, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n"
 		},
 
 		// Comments
-		{ message: "<span class=tutor-code>//</span> at the beginning of a line makes the line get ignored.  That's called commenting out.  Try adding <span class=tutor-code>//</span> before some of the other lines and see what happens!",
+		{ message: "A <span class=tutor-code>//</span>  írásjelek a sor elején  a sort mellőzi.  Ezt megjegyzéssé tesznek (commenting out) nevezik .  Próbáld hozzáadni a  <span class=tutor-code>//</span>  írásjelet egy másik sor elé és nézd meg mi történik!",
 		  code: "var size = 80;\nvar offset = 20;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.fillStyle =\"rgba(0, 0, 255, 0.5)\";\nc.fillRect(offset, offset, size, size);\noffset = offset + 60;\nc.fillStyle =\"rgba(0, 255, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n// c.clearRect(0, 0, w, h);\noffset = offset + 60;\nc.fillStyle =\"rgba(255, 0, 0, 0.5)\";\nc.fillRect(offset, offset, size, size);\n",
-		  lessonSection: "Comments",
+		  lessonSection: "Megjegyzések",
 		},
 
 		// Rotation and translation
-		{ message: "A box.  But how did it get that far away from the edge?  Try changing x and y.",
+		{ message: "Egy doboz. De azt hogyan érted el, hogy messze van a szélétől?  Próbáld megváltoztatni az x és y értékét.",
 		  code: "var x = 50;\nvar y = 50;\n\nc.fillStyle = \"purple\";\nc.translate(x, y);\nc.fillRect(0, 0, 100, 100);\n",
-		  lessonSection: "Rotation and Translation",
+		  lessonSection: "Forgatás és  áthelyezés",
 		},
-		{ message: "The fillRect() says to make the (left, top) at (0, 0), so wouldn't you think the box would be at the upper left corner? But, wait, what is translate()?"
+		{ message: "A fillRect() azt mondja, hogy helyezd a (left, top) -et a  (0, 0) -ra , így nem gondolod, hogy a doboznak a bal felső sarokban kellene lennie? De, várj,  mi a  translate()?"
 		},
-		{ message: "translate() changes where (0, 0) is. After translate(50, 50), for example, anything that tries to draw at (0, 0) will draw at (50, 50).  Drawing at (20, 20) would draw at (70, 70), since 50 + 20 = 70.  See?"
+		{ message: "A translate() megváltoztatja azt,  ahol  a (0, 0)  van.  A translate(50, 50) után, például, bármi , ami a  (0, 0) pozícióba próbál rajzolni, a  (50, 50) pozícióba fog rajzolni.  A (20, 20)-ba rajzolás a  (70, 70)-be fog rajzolni, mivel  50 + 20 = 70. Látod?"
 		},
-		{ message: "Why does this do what it does?  What will happen if you uncomment save() and restore()? Try it. Was it what you expected?",
+		{ message: "Miért csinálja ez azt, amit csinál?  Mi történik ha megjegyzést törlöd (uncomment) a  save() és  restore() sorokban? Próbáld ki. Az van, amit elvártál?",
 		  code: "var x = 50;\nvar y = 50;\n\n// c.save();\nc.fillStyle = \"purple\";\nc.translate(x, y);\nc.fillRect(0, 0, 100, 100);\n// c.restore();\nc.translate(x, y);\nc.fillRect(0, 0, 100, 100);\n"
 		},
-		{ message: "The second box becomes black and gets drawn right on top of the first box!  Why?",
+		{ message: "A második doboz fekete lesz and  és pont  az első dobozra (right on the top) kerül!  Miért?",
 		  code: "var x = 50;\nvar y = 50;\n\nc.save();\nc.fillStyle = \"purple\";\nc.translate(x, y);\nc.fillRect(0, 0, 100, 100);\nc.restore();\nc.translate(x, y);\nc.fillRect(0, 0, 100, 100);\n"
 		},
-		{ message: "restore() eliminates all the changes since the last save().  So, if you save, then change the fillStyle color or do translate(), then restore, everything goes back to what it was right before the save."
+		{ message: "A restore() megszünteti  az utolsó save() óta végrehajtott összes változtatást.  Így, ha mentesz, utána megváltoztatod a  fillStyle színt vagy  vagy végzel egy translate()-et , majd  visszaállítasz , minden visszamegy oda, ahol a mentést (save) megelőzően volt."
 		},
-		{ message: "We can rotate stuff too.  Try changing angle!",
+		{ message: "A dolgokat forgathajtuk is.  Próbáld változtatni a szöget!",
 		  code: "var x = 50;\nvar y = 50;\nvar angle = 0.1;\n\nc.translate(x, y);\nc.rotate(angle);\nc.strokeRect(0, 0, 100, 100);\n"
 		},
-		{ message: "You might be used to degrees?  Angles in Javascript are in radians.  45 degrees is about 0.8 in radians.  Try changing angle from 0.1 to 0.8!",
+		{ message: "Szeretnéd a fokot használni?  A  Javascriptben a szöget  radianban adjuk meg.  45 fok az kb. 0.8 radianban.  Próbáld megváltoztatni a szöget 0.1-től  0.8-ig!",
 		  code: "var x = 50;\nvar y = 50;\nvar angle = 0.1;\n\nc.translate(x, y);\nc.rotate(angle);\nc.strokeRect(0, 0, 100, 100);\n"
 		},
-		{ message: "Spinning all the way around is 360 degrees, right?  In radians, it is about 6.28.",
+		{ message: "A teljes körbeforgatás az  360 fok, igaz?  Radiánban ez kb. 6.28.",
 		},
-		{ message: "Did you notice that this box is pivoting through its top left corner when you rotate it?  That's the same spot we said to go with translate(), right?"
+		{ message: "Észrevetted, hogy ez a doboz a  bal felső sarok körül forog , amikor forgatod?  Ez ugyanaz a pont, mint ami a  translate()-tel kapcsolatos, igaz?"
 		},
-		{ message: "Try changing angle now.  How is this different?",
+		{ message: "Próbáld most megváltoztatni a szöget.  Micsoda különbség?",
 		  code: "var x = 100;\nvar y = 100;\nvar angle = 0.1;\n\nc.translate(x, y);\nc.rotate(angle);\nc.strokeRect(-50, -50, 100, 100);\n"
 		},
-		{ message: "Kind of weird that the strokeRect() uses -50 for the left and top, isn't it?  But the top left of the box is still at (50, 50), because we translated to (100, 100), and 100 - 50 = 50."
+		{ message: "Ugye milyen furcsa a -50 ,amit a strokeRect()  használ a bal és felső pozícióra ?  But the top left of the box is still at (50, 50), because we translated to (100, 100), and 100 - 50 = 50."
 		},
 		{ message: "When we rotate, we rotate around (100, 100) because of the translate().  Oh, and (100, 100) is the center of the box!  So, this box is rotating around its center!",
 		},
