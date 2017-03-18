@@ -69,7 +69,7 @@
 	  |
 	  <span class=info-link unselectable=on>About</span>
 	  |
-	  <span class=info-link unselectable=on>FAQ</span>
+	  <span class=info-link unselectable=on>GYIK</span>
 	  |
 	  <span class=info-link unselectable=on>Terms of Use</span>
 	  |
@@ -126,22 +126,22 @@
 	  Geeky Ventures.
 	  <div class="simplemodal-close simplemodal-closex">X</div>
 	</div>
-	<div id=faq style="display: none;">
-	  <h3>Frequently Asked Questions</h3>
-	  <b>What is the c in things like <code>c.save()</code>?</b>
+	<div id=gyik style="display: none;">
+	  <h3>Gyakran Ismétlődő Kérdések</h3>
+	  <b>Mi a c a darabokban, mint a <code>c.save()</code>?</b>
 	  <br><br>
-	  It's a little technical but, if you want to know the details, <code>c</code> is a variable Code Monster creates for you that contains the Canvas' 2D context.
-	  The code that creates the variable <code>c</code>, which is hidden, looks like
+	  Ez egy kicsit technikai de, ha tudni akarod a részleteket, a <code>c</code> egy változó Code Monster hozta létre neked, aemly tartalmazza a Canvas(Vászon) 2D összefüggéseit.
+	  A kód amely létrehozza a  <code>c</code> változót, amely rejtett, valahogy így néz ki
 	  <br><br>
 	  <code>var c = document.getElementById('pane').getContext('2d');</code>
 	  <br><br>
-	  <b>How can I save my code and use it outside of Code Monster?</b>
+	  <b>Hogyan tudom menteni a saját kódomat és felhasználni a Code Monsteren kívül?</b>
 	  <br><br>
-	  Short answer: It's not super easy, but you can copy-and-paste your code and then load that code in
-	  an HTML file (either loading a separate Javascript file or inlining the
-	  Javascript in your HTML file).
+	  Rövid válasz: Ez nem nagyon könnyű, de másolhatod és mozgathatod  a kódodat és azután betöltheted egy
+	  HTML fájlba (akár betötlheted egy különálló Javascript fájlba akár inline 
+		Javascript-ként  a HTML fájlodba ).
 	  <br><br>
-	  Longer answer: A minimal HTML file that works would look like this:
+	  Hosszabb válasz: Egy minimális HTML, amely működik így nézhet ki, mint ez:
 	  <br><br>
 	  <code>
 		&lt;html&gt;&lt;body&gt;
@@ -153,62 +153,58 @@
 		var c = document.getElementById(&#39;pane&#39;).getContext(&#39;2d&#39;);
 		<br>
 		<br>
-		// PASTE YOUR CODE HERE
+		// ILLESZD BE A SAJÁT KÓDODAT IDE
 		<br>
 		<br>
 		&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code>
 	  <br><br>
-	  If you copy that into a file, then copy-and-paste your code into it, then
-	  save the file with a filename ending in .html, you should be able to load the
-	  file in any web browser.
+	  Ha ezt bemásolod egy fájlba, majd másolod és beilleszted a kódodat ebbe, majd a fájlt elmented 
+		egy .html-re végződő fájlnéven, be tudod tölteni a fájlt bármelyik böngészőbe.
 	  <br><br>
-	  <b>Is there any other code that is hidden from me?</b>
+	  <b>Van még bármilyen kód, ami rejtett előttem?</b>
 	  <br><br>
-	  There is also a bit of hidden code to try to stop animations when you
-	  change lessons and the code you write is instrumented to try to
-	  prevent infinite loops. You shouldn't need those to run your code
-	  outside of Code Monster.
+		Van még egy pici rejtett kód azért, hogy megpróbáljuk megállítani az animációt, amikor 
+		leckét váltasz és a kód, amit írsz úgy hangszereli, hogy megpróbálja megvédni a 
+		végtelen hurokoktól. Ezek nem szükségesek neked, hogy a kódot a Code Monsteren kívül futtasd.
 	  <br><br>
-	  <b>Why aren't you telling me more about the syntax and terminology of Javascript?</b>
+	  <b>Miért nem mondasz többet a Javascript szintaktikáról és a fogalom meghatározásokról?</b>
 	  <br><br>
-	  There are already a lot of tutorials and textbooks out there that teach Javascript
-	  programming by explaining what a variable is, what variable scope is, what the syntax
-	  of an if statement looks like, how each of the operators work, and so on. If you want
-	  that, there are many choices available, many of which are excellent supplements to
-	  Code Monster.
+		Már számos oktatóprogram és könyv áll rendelkezésre arra, hogy megtanítsák a Javascript programozást
+		elmagyarázva, hogy mi a változó, mi az érvényessége, terjedelme, hogy néz ki a szintaktikája 
+		az if kifejezésnek, hogyan működnek egyes műveleti jelek, és így tovább. Ha ezt akarod,
+		számos lehetőség elérhető, számos ezek közül nagyon jó kiegészítóje a Code Monsternek.
 	  <br><br>
-	  What is hard to find is a tutorial that is fun, immersive, and gets you immediately
-	  building cool things. Code Monster skips a lot of the syntax and explanation you
-	  can get elsewhere (Google for it when you need it) and instead jumps straight into
-	  the fun of what you can do if you learn to code.
+		Amit nehéz megtalálni az egy oktatóprogram, ami mókás, magával ragadó, és lehetőséget kapsz, 
+		hogy azonnal király dolgokjat építhess. Code Monster átugrik számos szintaktikát és magyarázatot,
+		amiket te megkaphatsz máshol (használd a Google-t arre, amikor szükséges) és helyette egyenesen 
+		beleugrik a szóratkoztató részbe, amit te csinálhatsz akkor, ha programozni tanulsz.
 	  <br><br>
-	  <b>Why doesn't this work perfectly on an iPad (or other mobile device)?</b>
+	  <b>Miért nem működik ez tökéletesen egy iPaden (vagy másik mobil eszközön)?</b>
 	  <br><br>
-	  Code Monster will load on many mobile devices, might even be a bit playable
-	  depending on your device, but it isn't designed for mobile. Why not?
+	  Code Monstert betölti számos mobil eszköz, még egy kicsit játszható is
+		függően az eszköztől, de ez nem igazán mobilra tervezett. Miért nem?
+		<br><br>
+		Leginkább amiatt, mert mobilon nehéz gépelni. Nagy terjedelem írása egy mobil
+    eszközön nehéz, és ez még rosszabb, amikor az amit írni próbálsz az egy kód
+		és neked figyelni kell a kód egyéb részeire is.Nagy terjedelmű hagyományos kódot próbálsz
+		egy mobil eszközön írni, az nem egy jó gyakorlás. 
 	  <br><br>
-	  Mostly because it is hard to type on mobile. Writing large amounts on a mobile
-	  device is difficult, and it is even worse when what you are trying to write is code
-	  and you need to keep looking at other parts of the code. Trying to write
-	  large amounts of traditional code on a mobile device is not a good experience.
+	  Részben ez az oka annak, hogy úgy tűnik még senki sem hozott létre egy alkalmazást arra, hogy 
+		kódot tanulj mobilon, de vannak jó alkalmazások arra, hogy  programozási
+		koncepciókat tanítsanak (úgy mint a Hopscotch, a Move the Turtle, és a Cargo-bot).
 	  <br><br>
-	  In part because of that, no one seems to have created a great app yet for learning to code on
-	  mobile, but there are good apps out there that teach programming
-	  concepts (such as Hopscotch, Move the Turtle, and Cargo-bot).
+	  <b>Tudom offline használni a Code Monstert (amikor nem kapcsolódom az Internethez)?</b>
 	  <br><br>
-	  <b>Can I use Code Monster offline (when not connected to the internet)?</b>
+	  Természetesen!  Code Monster az internetet csak a legelején
+		használja, hogy betöltse a weboldalt, és azután sohasem használja az 
+		internetet ismét. 
 	  <br><br>
-	  Sure!  Code Monster only uses the internet at the very
-	  beginning, to load the website, and then never contacts the
-	  internet again.
-	  <br><br>
-	  So, for example, you can load Code Monster on a
-	  laptop, then go on an airplane or walk to a park where there is
-	  no internet connection, open your laptop there, and use Code
-	  Monster without the internet.  It even still saves your place so
-	  you get back to the same lesson when you return!  You don’t need
-	  an internet connection except at the very beginning
-	  when the website loads.
+	  Így , például, betöltheted a Code Monstert egy laptopra, 
+		azután beszállhatsz egy repülőgépbe vagy kisétálhatsz egy parkba,
+		ahol nincs internet kapcsolat, nyisd ki a ott a laptopot, és használd
+		a Code Monstert internet nélkül. Ez még elmenti a helyedet, így
+		te visszatérhetsz ugyanahhoz a leckéhez, amikor visszatérsz! Nem szükséges
+	  egy internet kapcsolat, kivéve a legelején, amikor a weblapot betölti.
 	  <br><br>
 	  <div class="simplemodal-close simplemodal-closex">X</div>
 	</div>
