@@ -506,7 +506,7 @@ var lessons =
 		{ message: "Megvan?  Valami ilyesmi? Nos, meg tudod csinálni, hogy az első négyzet is a fillSquare()-t használja a  fillRect() hívása helyett?",
 		  code: "c.fillRect(20, 30, 100, 100);\n\nfillSquare(200, 70, 150);\nfunction fillSquare(x, y, s) {\n  c.fillRect(x, y, s, s);\n}\n",
 		},
-		{ message: "Nézd, egy vonal. Huh. Többet akarok. Több vonal hozzáadása könnyebb lenne, ha van egy  drawLine() függvényünk ismét. Meg tudod írni ezt és utána a vonalak készítésére használni?<br>Tipp: Készíts egy függvényt a <span class=tutor-code>function doStuff(a, b, c, d) { } használatával.</span><br> Figyelem: a c-vel vigyázz, mert az már foglalt!",
+		{ message: "Nézd, egy vonal. Huh. Többet akarok. Több vonal hozzáadása könnyebb lenne, ha van egy  drawLine() függvényünk ismét. Meg tudod írni ezt és utána a vonalak készítésére használni?<br>Tipp: Készíts egy függvényt a <span class=tutor-code>function doStuff(a, b, c, d) { } használatával.</span><br> Figyelem: a c-vel vigyázz, mert a c változó már foglalt!",
 		  code:"c.beginPath();\nc.moveTo(30, 20);\nc.lineTo(200, 50);\nc.stroke();\n"
 		},
 		{ message: "Ahh, nem jobb ez? Adj hozzá egy további vonalat a jelenlegi alá.  Nem volt ez könnyebb most?",
@@ -553,7 +553,7 @@ var lessons =
 		},
 		{ message: "A fillRect() azt mondja, hogy helyezd a (left, top) -ot a  (0, 0) -ra , így nem gondolod, hogy a doboznak a bal felső sarokban kellene lennie? De, várj,  mi az a translate()?"
 		},
-		{ message: "A translate() megváltoztatja azt,  ahol  a (0, 0)  van.  Például a translate(50, 50) után bármi , ami a (0, 0) pozícióba próbál rajzolni, az (50, 50) pozícióba fog rajzolni.  A (20, 20)-ba rajzolás a  (70, 70)-be fog rajzolni, mivel  50 + 20 = 70. Látod?"
+		{ message: "A translate() megváltoztatja azt,  ahol  a (0, 0)  van.  Például a translate(50, 50) után bármi , ami a (0, 0) pozícióba próbál rajzolni, az az (50, 50) pozícióba fog rajzolni.  A (20, 20)-ba rajzolás a  (70, 70)-be fog rajzolni, mivel  50 + 20 = 70. Látod?"
 		},
 		{ message: "Miért csinálja ez azt, amit csinál?  Mi történik ha a megjegyzést törlöd (uncomment) a  save() és a restore() sorokban? Próbáld ki! Az van, amit elvártál?",
 		  code: "var x = 50;\nvar y = 50;\n\n// c.save();\nc.fillStyle = \"purple\";\nc.translate(x, y);\nc.fillRect(0, 0, 100, 100);\n// c.restore();\nc.translate(x, y);\nc.fillRect(0, 0, 100, 100);\n"
@@ -588,10 +588,10 @@ var lessons =
 		{ message: "El tudod mozgatni a fekete (black) dobozt a lila (purple) dobozról?  Így láthatod mindkettőt.",
 		  code: "var x = 100;\nvar y = 100;\nvar angle = 0.1;\n\nc.save();\nc.fillStyle = \"purple\";\nc.translate(x, y);\nc.rotate(angle);\nc.fillRect(-50, -50, 100, 100);\nc.restore();\nc.translate(x, y);\nc.rotate(angle);\nc.fillRect(-50, -50, 100, 100);\n"
 		},
-		{ message: "Íme egy megoldás. See how the translate() is to a different spot?  Próbáld most megváltozatni az angle értékét!  Próbáltál már az angle-re negatív értéket, mint a -0.2?",
+		{ message: "Íme egy megoldás. Látod, hogyan kell áthelyezni (translate()) egy másik helyre?  Próbáld most megváltozatni az angle értékét!  Próbáltál már az angle-re negatív értéket, mint a -0.2?",
 		  code: "var x = 100;\nvar y = 100;\nvar angle = 0.1;\n\nc.save();\nc.fillStyle = \"purple\";\nc.translate(x, y);\nc.rotate(angle);\nc.fillRect(-50, -50, 100, 100);\nc.restore();\nc.translate(x * 2, y * 2);\nc.rotate(angle*2);\nc.fillRect(-50, -50, 100, 100);\n"
 		},
-		{ message: "Boxes rotated relative to their center are usually what you want. Nézd egy függvény, ami különböző szögekkel forgatja a dobozokat!  Hozzá tudsz adni néhány további dobozt?",
+		{ message: "Dobozok, amelyek a középpontjuk körül forognak, általában ez az amit akarsz. Nézd egy függvény, ami különböző szögekkel forgatja a dobozokat!  Hozzá tudsz adni néhány további dobozt?",
 		  code: "function strokeSquare(x, y, size, angle) {\n  c.save();\n  c.translate(x + size / 2, y + size / 2);\n  c.rotate(angle);\n  c.strokeRect(-size / 2, -size / 2,\n                size, size);\n  c.restore();\n}\n\nstrokeSquare(50, 50, 100, 0.2);\nstrokeSquare(180, 100, 50, -0.1);\n",
 		},
 
@@ -620,7 +620,7 @@ var lessons =
 		{ message: "Oog, az rengeteg munka.",
 		},
 		{ message: "Megpróbálom változók segítségével. Ez könnyebbé teszi?  Nem vagy biztos, hogy ez működik. Mit gondolsz?",
-		  code: "var w = c.canvas.width;\nvar h = c.canvas.height;\n\ndrawLine(w * 0.5, h, w * 0.5, h * 0.7);\ndrawLine(w * 0.5, h * 0.7, w * 0.4, h * 0.5);\ndrawLine(w * 0.5, h * 0.7, w * 0.6, h * 0.5);\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n",
+		  code: "// Az alábbi két változó megadja a vászon\n// szélességét (w) és magasságát (h).\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\ndrawLine(w * 0.5, h, w * 0.5, h * 0.7);\ndrawLine(w * 0.5, h * 0.7, w * 0.4, h * 0.5);\ndrawLine(w * 0.5, h * 0.7, w * 0.6, h * 0.5);\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n",
 		},
 		{ message: "Bleah, ez továbbra is túl sok munka. Talán a for ciklus?  Ez hogyan működhet? Nem tudom.Hogyan tudnánk minden ágtól két ágat rajzolni? Nem vagyok biztos benne.  Mit gondolsz?",
 		},
@@ -636,12 +636,12 @@ var lessons =
 		},
 		{ message: "Hogyan tudunk most ezzel a rajzolással két további ágat rajzolni?"
 		},
-		{ message: "Ah, én tudom, csináld úgy, hogy a függvény saját magát használja! Látod ez mit csinál?",
-		  code: "var w = c.canvas.width;\nvar h = c.canvas.height;\n\ndrawBranch(w/2, h, 100, 0);\n\nfunction drawBranch(x, y, l, direction) {\n  var x2 = x + l * direction;\n  var y2 = y - l;\n  drawLine(x, y, x2, y2);\n  if (l > 20) {\n    // Call drawBranch twice more\n    drawBranch(x2, y2, l / 2, -0.8);\n    drawBranch(x2, y2, l / 2, 0.8);\n  }\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n",
+		{ message: "Ah, én tudom, csináld úgy, hogy a függvény saját magát használja! Látod, ez mit csinál?",
+		  code: "var w = c.canvas.width;\nvar h = c.canvas.height;\n\ndrawBranch(w/2, h, 100, 0);\n\nfunction drawBranch(x, y, l, direction) {\n  var x2 = x + l * direction;\n  var y2 = y - l;\n  drawLine(x, y, x2, y2);\n  if (l > 20) {\n  //  Hívd meg a drawBranch függvényt további kétszer\n    drawBranch(x2, y2, l / 2, -0.8);\n    drawBranch(x2, y2, l / 2, 0.8);\n  }\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n",
 		  lessonSection: "Rekurzió",
 		},
-		{ message: "Ez ördögi! Íme egy verzió amellyel könnyebb, hogy \"malmozz\" (to twiddle).  Próbálj játszani ezzel!  Változtasd meg az <span class=tutor-code>xScale</span>, az <span class=tutor-code>yScale</span>, vagy a  <span class=tutor-code>minLength</span> értékét!  Cool, huh?",
-		  code: "var minLength = 20;\nvar yScale = 0.5;\nvar xScale = 0.8;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\ndrawBranch(w/2, h, 100, 0);\n\nfunction drawBranch(x, y, l, direction) {\n  var x2 = x + l * direction;\n  var y2 = y - l;\n  drawLine(x, y, x2, y2);\n  if (l > minLength) {\n    // Call drawBranch twice more\n    drawBranch(x2, y2, l * yScale, -xScale);\n    drawBranch(x2, y2, l * yScale, xScale);\n  }\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
+		{ message: "Ez ördögi! Íme egy verzió amellyel könnyebb, hogy \"malmozz\" (to twiddle).  Próbálj játszani ezzel!  Változtasd meg az <span class=tutor-code>xScale</span>, az <span class=tutor-code>yScale</span>, vagy a  <span class=tutor-code>minLength</span> értékét!  \"Király\", huh?",
+		  code: "var minLength = 20;\nvar yScale = 0.5;\nvar xScale = 0.8;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\ndrawBranch(w/2, h, 100, 0);\n\nfunction drawBranch(x, y, l, direction) {\n  var x2 = x + l * direction;\n  var y2 = y - l;\n  drawLine(x, y, x2, y2);\n  if (l > minLength) {\n  // Hívd meg a drawBranch függvényt további kétszer\n    drawBranch(x2, y2, l * yScale, -xScale);\n    drawBranch(x2, y2, l * yScale, xScale);\n  }\n}\n\nfunction drawLine(x1, y1, x2, y2) {\n  c.beginPath();\n  c.moveTo(x1, y1);\n  c.lineTo(x2, y2);\n  c.stroke();\n}\n"
 		},
 		{ message: "Itt számos új elem van.  Monster megáll, hogy elmagyarázza."},
 		{ message: "A drawBranch() egy <i>rekursív</i> függvény.  Ami azt jelenti,hogy saját magát hívja."},
@@ -655,12 +655,12 @@ var lessons =
 		},
 		{ message: "Az nSquare() egy for ciklust használ, 4-nél indul, és visszaszámol: 4, 3, 2, 1.",
 		},
-		{ message: "Az nSquareRecursive() saját magát hívja minden egyes alkalommal eggyel kisebb számmal.  Így, amikor 4-gyel hívja meg, ez meghívja saját magát 3-mal, és az a hívás meghívja saját magát 2-vel, és az a hívás meghívja saját magát 1-gyel.  Egynél, ez azt mondja, állj le a saját magad hívásával, így megáll.  És, minden hívásra, egy dobozt rajzol, amely (n * 30, n * 30) pozícióban helyezkedik el.  Látod?",
+		{ message: "Az nSquareRecursive() saját magát hívja, minden egyes alkalommal eggyel kisebb számmal. Így, amikor 4-gyel hívja meg, ez meghívja saját magát 3-mal, és ez a hívás meghívja saját magát 2-vel, és ez a hívás meghívja saját magát 1-gyel.  Egynél, ez azt mondja, állj le a saját magad hívásával, így megáll.  És, minden hívásra, egy dobozt rajzol, amely (n * 30, n * 30) pozícióban helyezkedik el.  Látod?",
 		},
 		{ message: "Ez kicsi kód darab egy zsugorodó dobozok halmazát rajzolja meg. Látod hogyan működik?",
 		  code: "branchBox(100);\n\nfunction branchBox(size) {\n  c.translate(size, size);\n  c.strokeRect(-size, -size, size, size);\n  if (size > 5) {\n    branchBox(size * 0.65);\n  }\n}\n"
 		},
-		{ message: "Ez úgy működik, hogy ez végrehajt egy translate()-et a doboz jobb alsó sarkához, majd megrajzolja a dobozt e mögé. Így a doboz <span class=tutor-code>size</span> nagyságú lesz a (-size, -size)-tól kezdődően.  Ezután, mindaddig amíg a doboz nem lesz túl kicsi, ezt végrehajtja ismét saját maga hívásával, de következő alkalommal a doboz méretének zsugorításával.",
+		{ message: "Ez úgy működik, hogy ez végrehajt egy áthelyezést (translate()-et) a doboz jobb alsó sarkához, majd megrajzolja a dobozt e mögé. Így a doboz <span class=tutor-code>size</span> nagyságú lesz a (-size, -size)-tól kezdődően.  Ezután, mindaddig amíg a doboz nem lesz túl kicsi, ezt végrehajtja ismét saját maga hívásával, de következő alkalommal a doboz méretének zsugorításával.",
 		},
 		{ message: "Íme ugyanaz a darab, amely inkább a for ciklust használja. Hasonlítsd össze a kettőt. Látod, hogyan működik mindkettő?",
 		  code: "branchBoxForLoop(100);\n\nfunction branchBoxForLoop(size) {\n  c.strokeStyle = \"blue\";\n  for (var i = size; i > 4; i = i * 0.65) {\n    c.translate(i, i);\n    c.strokeRect(-i, -i, i, i);\n  }\n}\nfunction branchBox(size) {\n  c.translate(size, size);\n  c.strokeRect(-size, -size, size, size);\n  if (size > 5) {\n    branchBox(size * 0.65);\n  }\n}\n"
@@ -682,7 +682,7 @@ var lessons =
 		{ message: "Azt gondolom ez még jobban olyan lenne, mint egy fa, ha az <span class=tutor-code>angle</span> értéke egy kicsit jobban véletlenszerű lenne.  Nagyobbá tudod tenni a szöget és utána egy rotate()-et csinálni, amely egy számot használ 0 és az angle között? (Tipp: a <span class=tutor-code>Math.random()</span> eredményül ad egy számot 0.0-tól  1.0-ig.)"
 		},
 		{ message: "Íme egy változat.  A <span class=tutor-code>branchScale</span> értékét is jobban véletlenszerűvé tudod tenni?",
-		  code: "var angle = 0.5;\nvar branchScale = 0.75;\nvar l = 75;\nvar minL = 5;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.translate(w/2, h);\ndrawBranch(l, 0);\n\nfunction drawBranch(l, direction) {\n  c.save();\n  // Make a number between 0 and angle\n  var a = angle * Math.random();\n  c.rotate(a * direction);\n  c.fillRect(-l / 20, 0, l / 10, -l);\n  if (l > minL) {\n    c.translate(0, -l);\n    drawBranch(l * branchScale, -1);\n    drawBranch(l * branchScale, 1);\n  }\n  c.restore();\n}\n"
+		  code: "var angle = 0.5;\nvar branchScale = 0.75;\nvar l = 75;\nvar minL = 5;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.translate(w/2, h);\ndrawBranch(l, 0);\n\nfunction drawBranch(l, direction) {\n  c.save();\n  // Csinál egy számot 0 és angle között \n  var a = angle * Math.random();\n  c.rotate(a * direction);\n  c.fillRect(-l / 20, 0, l / 10, -l);\n  if (l > minL) {\n    c.translate(0, -l);\n    drawBranch(l * branchScale, -1);\n    drawBranch(l * branchScale, 1);\n  }\n  c.restore();\n}\n"
 		},
 		{ message: "Óóó!  Ez az, ez nagyon hasonlít egy fára !",
 		  code: "var angle = 0.5;\nvar branchScale = 0.75;\nvar l = 60;\nvar minL = 5;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\nc.translate(w/2, h);\ndrawBranch(l, 0);\n\nfunction drawBranch(l, direction) {\n  c.save();\n  var a = angle * Math.random();\n  c.rotate(a * direction);\n  c.fillRect(-l / 20, 0, l / 10, -l);\n  if (l > minL) {\n    c.translate(0, -l);\n    // Make a number between -0.1 and 0.1\n    var b = 0.2 * (Math.random() - 0.5);\n    // Now make it between 0.9 and 1.1\n    b = b + 1;\n    // And use it to change branchScale\n    drawBranch(l * b * branchScale, -1);\n    b = 1 + 0.2 * (Math.random() - 0.5);\n    drawBranch(l * b * branchScale, 1);\n  }\n  c.restore();\n}\n",
@@ -700,7 +700,7 @@ var lessons =
 		{ message: "Akkor, először kell egy ág.  Hozzunk létre egy drawBranch() függvényt, ami két változót használ , egy hossz változót, amit <span class=tutor-code>l</span>-nek hív, és egy <span class=tutor-code>direction (irány)</span> változót.",
 		  code: "",
 		},
-		{ message: "Emlékszel, hogyan írsz egy függvény, mint ez? Nem szükséges, hogy még bármi egyebet csinálj, csak deklarálj egy drawBranch() nevű függvényt.",
+		{ message: "Emlékszel, hogyan írsz egy függvény, mint ez? Nem szükséges, hogy még bármi egyebet csinálj, csak hozz létre egy drawBranch() nevű függvényt.",
 		},
 		{ message: "Valami hasonlón gondolkozol?",
 		  code: "function drawBranch(l, direction) {\n  \n}\n"
@@ -766,7 +766,7 @@ var lessons =
 		},
 		{ message: "Meg tudod ezt csinálni, így mindkét drawBranch() hívás  a drawBranch()-en belül  -direction értéket használja a direction helyett?",
 		},
-		{ message: "Ez van nálad is most?  Wow, azép munka!",
+		{ message: "Most ez van nálad is?  Wow, szép munka!",
 		  code: "function drawBranch(l, direction) {\n  c.save();\n  \n  c.fillRect(-1, 0, 2, -l);\n  \n  c.translate(0, -l);\n  \n  if ( l > 5 ) {\n    drawBranch(l * 0.8, -direction);\n    \n    c.rotate(0.5 * direction);\n    drawBranch(l * 0.7, -direction);\n  }\n  \n  c.restore();\n}\n\nc.translate(200, 250);\ndrawBranch(50, 1);\n",
 		},
 		{ message: "Próbálj többet játszani vele! Próbáld megváltozatni a 0.8-as, a 0.7-es, és a 0.5-ös értéket, hogy lássad mi történik!",
@@ -793,11 +793,11 @@ var lessons =
 		  lessonSection: "Fraktálok",
 		},
 		{ message: "Ezt a fraktált Terdragon-nak hívják.",
-		  code: "var n = 8;\nvar l = 5;\nvar angle = 120 * Math.PI / 180;\n\nc.translate(300, 200);\nterdragon(n);\nfunction terdragon(n) {\n  if (n <= 1) {\n    drawLine(l);\n  } else {\n    terdragon(n-1);\n    c.rotate(angle);\n    terdragon(n-1);\n    c.rotate(-angle);\n    terdragon(n-1);\n  }\n}\nfunction drawLine(l) {\n  c.beginPath();\n  c.moveTo(0, 0);\n  c.lineTo(l, 0);\n  c.stroke();\n  // Finish at the end of the line we drew\n  c.translate(l, 0);\n}\n"
+		  code: "var n = 8;\nvar l = 5;\nvar angle = 120 * Math.PI / 180;\n\nc.translate(300, 200);\nterdragon(n);\nfunction terdragon(n) {\n  if (n <= 1) {\n    drawLine(l);\n  } else {\n    terdragon(n-1);\n    c.rotate(angle);\n    terdragon(n-1);\n    c.rotate(-angle);\n    terdragon(n-1);\n  }\n}\nfunction drawLine(l) {\n  c.beginPath();\n  c.moveTo(0, 0);\n  c.lineTo(l, 0);\n  c.stroke();\n  // Fejezd be a vonal végénél, amit rajzoltunk\n  c.translate(l, 0);\n}\n"
 		},
-		{ message: "Ha l értéke nagyobb, akkor bele tudsz nagyítani és láthatod ez kicsi háromszögekből épül fel!",
+		{ message: "Ha l értéke nagyobb, akkor bele tudsz nagyítani és láthatod, ez kicsi háromszögekből épül fel!",
 		},
-		{ message: "Ki tudod találni, ez hogyan működik? Vess egy pillatnást a kódra.",
+		{ message: "Ki tudod találni, ez hogyan működik? Vess egy pillantást a kódra.",
 		},
 		{ message: "Próbáld <span class=tutor-code>l=10</span> megadásával és utána az <span class=tutor-code>n=1</span> és azután  <span class=tutor-code>n=2</span> azután <span class=tutor-code>n=3</span>, és látni fogod ez hogyan növekszik.",
 		},
@@ -807,7 +807,7 @@ var lessons =
 		  code: "",
 		  lessonSection: "Teszt: Kihívás probléma",
 		},
-		{ message: "A teszten, azt akarom, hogy írj valamit teljesen magadtól.  Csinálj egy sakktábla mintát, egy fekete négyzet, utan egy fehár, utána egy fekete, és így tovább, legalább 4 sor ezekből  (például  6 x 4 -es rács).  Meg tudod ezt csinálni?",
+		{ message: "A teszten, azt akarom, hogy írj valamit teljesen magadtól.  Csinálj egy sakktábla mintát, egy fekete négyzet, utána egy fehér, utána egy fekete, és így tovább, legalább 4 sor ezekből  (például  6 x 4 -es rács).  Meg tudod ezt csinálni?",
 		  code: ""
 		},
 		{ message: "Ha megcsináltad, jó munka, ez tényleg nehéz, El vagyok ragadtatva!  Ha nem kaptad ezt meg, ne aggódj, itt egy tipp, két for ciklusra lehet szükséged, egyik a másikon belül, legalább egy c.fillRect() utasítást fogsz használni, és ne felejtsd el egy  for ciklus valahogy így néz ki <span class=tutor-code>for (var i = 0; i < 3; i += 1) { }</span>",
@@ -855,10 +855,10 @@ var lessons =
 		  // tutorImage: 8,
 		},
 		{ message: "Mozgó dolog mókás, de egy kicsit furcsa. Megközelítőleg egy másodperc minden egyes 1/20-ad részében valaminek történnie kell. Mi csinálja ezt?",
-		  code: "var vx = 4;\nvar vy = 1;\nvar step = 50;  // In milliseconds\n\nvar x = 0;\nvar y = 0;\nvar size = 50;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\nvar cmTID;\n\ndrawStep();\nfunction drawStep() {\n  // Clear the screen\n  c.clearRect(0, 0, w, h);\n  // Draw the box\n  c.strokeRect(x, y, size, size);\n  // Move the box unless at edge\n  if (x + vx + size < w &&\n      y + vy + size < h) {\n    x += vx;\n    y += vy;\n    clearTimeout(cmTID);\n    // Do it again in a little bit\n    cmTID = setTimeout(drawStep, step);\n  }\n}\n",
+		  code: "var vx = 4;\nvar vy = 1;\nvar step = 50;  // Milliszekundumban\n\nvar x = 0;\nvar y = 0;\nvar size = 50;\nvar w = c.canvas.width;\nvar h = c.canvas.height;\nvar cmTID;\n\ndrawStep();\nfunction drawStep() {\n  // Képernyő törlése\n  c.clearRect(0, 0, w, h);\n  // Rajzol egy dobozt\n  c.strokeRect(x, y, size, size);\n  // Mozgatja a dobozt hacsak nincs a szélénél\n  if (x + vx + size < w &&\n      y + vy + size < h) {\n    x += vx;\n    y += vy;\n    clearTimeout(cmTID);\n    // Csináld ismét egy kicsivel későbbt\n    cmTID = setTimeout(drawStep, step);\n  }\n}\n",
 		  hiddenCode: "var c = document.getElementById('pane').getContext('2d');\ndocument.stopAnimation = function() {clearTimeout(cmTID);};\nfunction rgba(r,g,b,a) {return 'rgba('+[r,g,b,a].join(',')+')';}\nfunction rgb(r,g,b,a) {return 'rgb('+[r,g,b].join(',')+')';}\n\n"
 		},
-		{ message: "A mód ahogy ez működik: mindenkor, amikor  azt mondjuk, hogy hajtsd végre a drawStep()-et, mi töröljük a képernyőt, mozgatjuk a dobozt, rajzoljuk a dobozt, és, hacsak nem értintjük a szélét, mi azt mondjuk, hogy csinálj drawStep()-et ismét egy kicsivel később.",
+		{ message: "A mód ahogy ez működik: mindenkor, amikor  azt mondjuk, hogy hajtsd végre a drawStep()-et, mi töröljük a képernyőt, mozgatjuk a dobozt, rajzoljuk a dobozt, és hacsak nem értintjük a szélét, mi azt mondjuk, hogy csinálj drawStep()-et ismét egy kicsivel később.",
 		},
 		{ message: "Próbáld megváltoztatni a <span class=tutor-code>vx</span>, a <span class=tutor-code>vy</span>, és a <span class=tutor-code>step</span> értékét. Megváltoztathatod a doboz sebességét és különböző irányokba mozgathatod!"
 		},
@@ -893,15 +893,15 @@ var lessons =
 		{ message: "Létrehozhatsz változókat x1, x2, x3, y1, y2, y3, dx1 ... ugh.  Ez egészen fájdalmas, nemde?",
 		},
 		{ message: "Van egy másik módja, hogy ezt megcsináljuk, létrehozhatunk objektumot! Objektumok a változók és a kód kis csomagjai. Íme egy Box objektum.  Vess rá egy pillantást.  Látod, ez hogyan működik?",
-		  code: "// Box objektum\nfunction Box(x, y, size) {\n  this.x = x;\n  this.y = y;\n  this.size = size;\n  this.angle = 0;\n  this.dx = 0;\n  this.dy = 0;\n}\n// Egy új box létrehozása\nvar b = new Box(10, 10, 100);\nc.strokeRect(b.x, b.y, b.size, b.size);\n"
+		  code: "// Box objektum\nfunction Box(x, y, size) {\n  this.x = x;\n  this.y = y;\n  this.size = size;\n  this.angle = 0;\n  this.dx = 0;\n  this.dy = 0;\n}\n// Egy új box objektum létrehozása\nvar b = new Box(10, 10, 100);\nc.strokeRect(b.x, b.y, b.size, b.size);\n"
 		},
-		{ message: "Mi történik akkor, amikor a <span class=tutor-code>new Box(10, 10, 100)</span> létrehoz egy objektumot, azután azonnal meghívja  a Box() függvényt ,hogy létrehozza azt. Box() ezután használja a <span class=tutor-code>this.x</span>-et, hogy beállítson egy x-nek nevezett változót az objektumban x-hez , amely a függvénynek átadásra került."
+		{ message: "Mi történik akkor, amikor a <span class=tutor-code>new Box(10, 10, 100)</span> létrehoz egy objektumot, azután azonnal meghívja  a Box() függvényt ,hogy létrehozza azt. Box() ezután a <span class=tutor-code>this.x</span>-et használja, hogy beállítson egy x-nek nevezett változót az objektumban x-hez , amely a függvénynek átadásra került."
 		},
 		{ message: "Ez ugyanazt a dolgot csinálja, hogy beállítja az összes további változót az új Box objektumunkban.  Amikor egyszer az objektumot létrehoztuk és beállítottuk, mi beállítjuk a <span class=tutor-code>b</span> változónkat hozzá.  Később, mi megkaphatjuk az x és az y és a további változóinkat a <span class=tutor-code>b.x</span>, a <span class=tutor-code>b.y</span>,  stb. használatával."
 		},
 		{ message: "A box objektumunk az csak a változók egy kicsi csomagja , amely leírja a mi dobozunkat.  Ez megmondja hol van a doboz, a sebességét (dx és dy), hogy milyen nagy, mindent, ami azt jelenti, hogy ez egy doboz.",
 		},
-		{ message: "Nekünk akár olyan  box objektumaink lehetnek, amelyek tudják hogyan kell saját magukat megrajzolni.",
+		{ message: "Nekünk akár olyan  box objektumaink is lehetnek, amelyek tudják hogyan kell saját magukat megrajzolni.",
 		  code: "function Box(x, y, size) {\n  this.x = x;\n  this.y = y;\n  this.size = size;\n  this.angle = 0;\n  this.dx = 0;\n  this.dy = 0;\n\n  this.stroke = function() {\n    c.strokeRect(this.x, this.y,\n                 this.size, this.size);\n  };\n}\nvar b1 = new Box(30, 30, 120);\nb1.stroke();\n"
 		},
 		{ message: "Látod hogyan létesíti a <span class=tutor-code>this.stroke</span>-t  mint, egy függvényt?  És ez a függvény meghívja a strokeRect()-et, hogy megrajzolja ezt a dobozt?  Ezután, később, létrehoz egy box-ot, amit b1-nek nevez és megmondja neki, hogy rajzolja meg saját magát a <span class=tutor-code>b1.stroke()</span>-kal. Ez nagyon \"király\", nemde?",
@@ -916,13 +916,13 @@ var lessons =
 		{ message: "A Monster hozzáadott néhány kódot neked, hogy megkapd a weblapról az adott objektumot és egy  <span class=tutor-code>c</span>-nek nevezett változóba helyezi, így használhatod ezt.  Hadd mutassam meg neked, hogyan néz ki a rejtett kód.",
 		  code: "// Ez a kód korábban rejtett volt\nvar pane = document.getElementById('pane');\nvar c = pane.getContext('2d');\n\nfunction Box(x, y, size) {\n  this.x = x;\n  this.y = y;\n  this.size = size;\n  this.angle = 0;\n  this.dx = 0;\n  this.dy = 0;\n\n  this.stroke = function() {\n    c.strokeRect(this.x, this.y,\n                 this.size, this.size);\n  };\n}\nvar b1 = new Box(30, 30, 120);\nb1.stroke();\n",
 		},
-		{ message: "Ez a kód megkéri a document objektumot (amely a weblap), hogy a weblapon \'pane\'-nek hívott elemet adja nekünk (a \'pane\' az id(azonosítója)-ja a canvas(rajzvászon)-nak a weblapon ahová mi rajzolunk), és ezután megkapja 2d rajzvásznat az adott elemtől. A canvas objektumot <span class=tutor-code>c</span>-nek hívjuk és felhsználjuk az összes rajzoló funkcióját, ez az amiért mi <span class=tutor-code>c.</span>-ot használjuk  minden strokeRect() használat előtt."
+		{ message: "Ez a kód megkéri a document objektumot (amely a weblap), hogy a weblapon \'pane\'-nek hívott elemet adja nekünk (a \'pane\' az id(azonosítója)-ja a canvas((rajz)vászon)-nak a weblapon ahová mi rajzolunk), és ezután megkapja 2d (rajz)vásznat az adott elemtől. A canvas objektumot <span class=tutor-code>c</span>-nek hívjuk és felhasználjuk az összes rajzoló funkcióját, ez az amiért mi <span class=tutor-code>c.</span>-ot használjuk  minden strokeRect() használat előtt."
 		},
 		{ message: "Ez hasznos, hogy tudjad, ha saját Javascript programodat írod később a saját rajzolásod miatt  egy weboldalon!  De, most, rejtsük el ismét, így mi a Box objektumokra tudunk koncentrálni.",
 		  code: "function Box(x, y, size) {\n  this.x = x;\n  this.y = y;\n  this.size = size;\n  this.angle = 0;\n  this.dx = 0;\n  this.dy = 0;\n\n  this.stroke = function() {\n    c.strokeRect(this.x, this.y,\n                 this.size, this.size);\n  };\n}\nvar b1 = new Box(30, 30, 120);\nb1.stroke();\n",
 		  lessonSection: "Obejtumok használata",
 		},
-		{ message: "Létre tudsz hozni pár box-ot, amelyek meg tudját saját magukat rajzolni? Mindegyikre, használnod kell a new and stroke() utasításokat, ahogy mi tettük ezt a box esetében, amit b1-nek hívtunk.",
+		{ message: "Létre tudsz hozni pár box-ot, amelyek meg tudják saját magukat rajzolni? Mindegyikre, használnod kell a new and stroke() utasításokat, ahogy mi tettük ezt a box esetében, amit b1-nek hívtunk.",
 		},
 		{ message: "Ez nagyon csinos, de minden egyes doboz b1, b2, b3 vagy bármelyik hívása fájdalmas. Mi van, ha 10 dobozt akarunk?  Vagy százat?",
 		},
@@ -933,7 +933,7 @@ var lessons =
 		// Explain lists/arrays
 		{ message: "Íme egy nagy, új dolog.  Monster elmagyarázza.",
 		},
-		{ message: "A <span class=tutor-code>[]</span> írásjelek létrehoznak valamit, amit egy <i>array (tömb)</i>-nek hivnak, amely alapvetően egy lista, és dolgokat tárol.  Ezek a listák objektumokat, számokat, bármit amit akarsz is tárolhatnak.",
+		{ message: "A <span class=tutor-code>[]</span> írásjelek létrehoznak valamit, amit egy <i>array (tömb)</i>-nek hivunk, amely alapvetően egy lista, és dolgokat tárol.  Ezek a listák objektumokat, számokat, bármit amit akarsz is tárolhatnak.",
 		},
 		{ message: "Így, a <span class=tutor-code>var boxes = []</span>  egy üres lista létrehozását jelenti, amit <span class=tutor-code>boxes</span>-nak hívnak.",
 		},
@@ -945,7 +945,7 @@ var lessons =
 		},
 
 		// Boxes should rotate themselves, move themselves, update themselves
-		{ message: "Eddig, mi valójában nem csináltuk meg annyit, amit a Box obejektumot igényelnek.  De lépjünk tovább.  Csináljunk dobozokat, amelyeket animálunk és mozognak!",
+		{ message: "Eddig, mi valójában nem csináltuk meg mindazt, amit a Box objektumot igényelnek.  De lépjünk tovább.  Csináljunk dobozokat, amelyeket animálunk és mozognak!",
 		  lessonSection: "Eljárások (methods) az objektumokra",
 		},
 		{ message: "Kezdjük el megrajzolni a dobozainkat, bármilyen szöget feltételezve nekik. Látod, hogyan működik a stroke() új változata?",
@@ -976,7 +976,7 @@ var lessons =
 		},
 		{ message: "Ez egy kicsit komplikáltabb, de csak egy kicsit.  Mindenkor, amikor egy box-nak megmondják, hogy update()-t csináljon, ez mozog a saját sebességével (<span class=tutor-code>dx</span> és <span class=tutor-code>dy</span>) és forog a szögsebességével (<span class=tutor-code>da</span>).",
 		},
-		{ message: "Ha egy doboz elmegy a képernyő szélésig, mi megfordítjuk a sebességeket, úgy csinálva, hogy ütközésnek tünjön!  \"Király\"!",
+		{ message: "Ha egy doboz elmegy a képernyő széléig, mi megfordítjuk a sebességeket, úgy csinálva, hogy ütközésnek tünjön!  \"Király\"!",
 		},
 
 		// Bitwise operators
@@ -1002,7 +1002,7 @@ var lessons =
 		  lessonSection: "Körök, körívek és labdák",
 		  // tutorImage: 1,
 		},
-		{ message: "Most, hogy ismered az objektumokat sebesség elemmel, mi aktuálisan tényleg közel vagyunk ahhoz, hogy képesek legyünk \"király\" dologkat csinálni, mint a labda visszapattanása.  Amire szükségünk van ez egy kis fizika, some acceleration to go with our velocities!",
+		{ message: "Most, hogy ismered az objektumokat sebesség elemmel, mi aktuálisan tényleg közel vagyunk ahhoz, hogy képesek legyünk \"király\" dologkat csinálni, mint a labda visszapattanása.  Amire szükségünk van ez egy kis fizika, egy kis gyorsulás, hogy illeszkedjen a sebességeinkhez!",
 		},
 		{ message: "Íme egy <span class=tutor-code>Ball</span> objektum.  Ez sokban olyan, mint a Box objektum amit korábban láttad, de vannak különbségek.  Vess egy pillantást a kódra.",
 		  code: "function Ball(x, y, r, dx, dy) {\n  this.x = x;\n  this.y = y;\n  this.r = r;\n  this.dx = dx;\n  this.dy = dy;\n\n  this.update = function() {\n    this.x = this.x + this.dx;\n    this.y = this.y + this.dy;\n    // Visszapattanás a széleknél\n    if (this.x - this.r < 0 ||\n        this.x + this.r > w) {\n      this.dx = -this.dx;\n    }\n    if (this.y - this.r < 0 ||\n        this.y + this.r > h) {\n      this.dy = -this.dy;\n    }\n    this.stroke();\n  };\n  \n  this.stroke = function() {\n    c.beginPath();\n    c.arc(this.x, this.y, this.r,\n                 0, Math.PI * 2);\n    c.stroke();\n  };\n}\n\nvar timeStep = 50; // Milliszekundumban\nvar w = c.canvas.width;\nvar h = c.canvas.height;\nvar cmTID;\n\nfunction updateAll() {\n  c.clearRect(0, 0, w, h);\n  for (var i = 0; i < balls.length; i = i + 1) {\n    balls[i].update();\n  }\n  clearTimeout(cmTID);\n  cmTID = setTimeout(updateAll, timeStep);\n}\n\n// A labdák létrehozása\nvar balls = [];\nvar r = 40;\nfor (var i = 0; i < 1; i = i + 1) {\n  var x = Math.random() * (w - r * 2) + r;\n  var y = Math.random() * (h - r * 2) + r;\n  var dx = Math.random() * 2 - 1;\n  var dy = Math.random() * 2 - 1;\n  \n  balls.push(new Ball(x, y, r, dx, dy));\n}\n// Csináld meg az első frissítést\nupdateAll();\n\n",
@@ -1018,7 +1018,7 @@ var lessons =
 		},
 		{ message: "Vess egy pillantást ismét a kódra.  Most jobban érthető?",
 		},
-		{ message: "Okay, most mi visszapattanó labdákat csinálunk.  Hogy kezejük a fizikát, szükségünk van sebességra és gyorsulásra.  Eddig , volt sebességünk, de nincs gyorsulásunk.  Adjuk hozzá a gyorsulást!  Íme itt van!",
+		{ message: "Okay, most mi visszapattanó labdákat csinálunk.  Hogy kezejük a fizikát, szükségünk van sebességre és gyorsulásra.  Eddig , volt sebességünk, de nincs gyorsulásunk.  Adjuk hozzá a gyorsulást!  Íme itt van!",
 		  code: "function Ball(x, y, r, dx, dy) {\n  this.x = x;\n  this.y = y;\n  this.r = r;\n  this.dx = dx;\n  this.dy = dy;\n\n  this.update = function() {\n    // Visszapattanás a széleknél\n    if (this.x - this.r + this.dx < 0 ||\n        this.x + this.r + this.dx > w) {\n      this.dx = -this.dx;\n    }\n    if (this.y - this.r + this.dy < 0 ||\n        this.y + this.r + this.dy > h) {\n      this.dy = -this.dy;\n    } else {\n      // Csak a gravitáció a mi gyorsulásunk\n      this.dy += gravity;\n    }\n    \n    this.x = this.x + this.dx;\n    this.y = this.y + this.dy;\n    \n    this.stroke();\n  };\n  \n  this.stroke = function() {\n    c.beginPath();\n    c.arc(this.x, this.y, this.r,\n                 0, Math.PI * 2);\n    c.stroke();\n  };\n}\n\nvar gravity = 0.05;\nvar timeStep = 25; // Milliszekundumban\nvar w = c.canvas.width;\nvar h = c.canvas.height;\nvar cmTID;\n\nfunction updateAll() {\n  c.clearRect(0, 0, w, h);\n  for (var i = 0; i < balls.length; i = i + 1) {\n    balls[i].update();\n  }\n  clearTimeout(cmTID);\n  cmTID = setTimeout(updateAll, timeStep);\n}\n\n// A labdák létrehozása\nvar balls = [];\nvar r = 40;\nfor (var i = 0; i < 1; i = i + 1) {\n  var x = Math.random() * (w - r * 2) + r;\n  var y = Math.random() * (h - r * 2) + r;\n  var dx = Math.random() * 2 - 1;\n  var dy = Math.random() * 2 - 1;\n  \n  balls.push(new Ball(x, y, r, dx, dy));\n}\n// Csináld meg az első frissítést\nupdateAll();\n\n",
 		  lessonSection: "Gyorsulás, sebesség és fizika",
 		},
@@ -1034,7 +1034,7 @@ var lessons =
 		},
 		{ message: "Ha most ránézel a frissített kódra, felhasználunk egy súrlódási erőt, amikor a labda visszapattan a falaknál.  Ez lassabbá teszi őket, mint ahogy megérkeztek. Végül, a labdák mindegyikének leáll a pattogása és lassan elgurulnak alul.",
 		},
-		{ message: "\"Király\" szimuláció, és hozzáad valamennyi realitást.  Játssz egy kicsit ezzel!  Változtasd meg a súrlódást(friction), adj hozzá további labdákat, növeld a gravitációt(gravity), változtasd meg az ütemet (timeStep).  Try messing around with it!",
+		{ message: "\"Király\" szimuláció, és hozzáad valamennyi realitást.  Játssz egy kicsit ezzel!  Változtasd meg a súrlódást(friction), adj hozzá további labdákat, növeld a gravitációt(gravity), változtasd meg az ütemet (timeStep).  Próbálj vacakolni (messing around) ezzel!",
 		},
 
 		// Do mouse events, boxes attracted to mouse, boxes avoiding other boxes but attracted to mouse.
@@ -1043,12 +1043,12 @@ var lessons =
 		  hiddenCode: "var c = document.getElementById('pane').getContext('2d');\nfunction rgba(r,g,b,a) {return 'rgba('+[r,g,b,a].join(',')+')';}\nfunction rgb(r,g,b,a) {return 'rgb('+[r,g,b].join(',')+')';}\n\n",
 		  lessonSection: "Egér események(events)",
 		},
-		{ message: "Íme egy labda, ami hozzátapad az egérhez. Mindenkor ammikor az egér mozog, a labdát újrarajzolja az egér tetején.",
+		{ message: "Íme egy labda, ami hozzátapad az egérhez. Mindenkor amikor az egér mozog, a labdát újrarajzolja az egér tetején.",
 		  code: "var pane = document.getElementById('pane');\nvar w = c.canvas.width;\nvar h = c.canvas.height;\n\npane.onmousemove = function(evt) {\n  var x = evt.clientX;\n  var y = evt.clientY;\n  \n  c.clearRect(0, 0, w, h);\n  c.beginPath();\n  c.arc(x, y, 40, 0, Math.PI * 2);\n  c.stroke();\n};\n",
 		},
 		{ message: "Hogyan működik? Ez a pane változó beállításával kezdődik a weblap \'pane\' id-jú eleméhez, amely történetesen a mi rajzvásznunkat tartalmazza.",
 		},
-		{ message: "A <span class=tutor-code>pane.onmousemove = function(evt) {};</span> tényleg fontos. A kód egy függvényt köt az binds a function to the <i>onmousemove</i> eseményhez(event) a 'pane' elemnél, amely azt jelenti, hogy ezt a függvényt meghívjuk bármikor az egér a rajzvásznon belül mozog.",
+		{ message: "A <span class=tutor-code>pane.onmousemove = function(evt) {};</span> tényleg fontos. A kód egy függvényt kapcsol a 'pane' elemnél az <i>onmousemove</i> eseményhez(event), amely azt jelenti, hogy ezt a függvényt meghívjuk amikor az egér a rajzvásznon belül mozog.",
 		},
 		{ message: "A függvényünk ezután lekérdezi az eseményt ahol az egér van (a <span class=tutor-code>clientX</span> és a <span class=tutor-code>clientY</span> adatokat) és rajzol egy nagy kört köré.  Érted?",
 		},
